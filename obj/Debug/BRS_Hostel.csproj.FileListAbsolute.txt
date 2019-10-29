@@ -1,0 +1,9 @@
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\bin\Debug\BRS_Hostel.exe.config
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\bin\Debug\BRS_Hostel.exe
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\bin\Debug\BRS_Hostel.pdb
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.csprojAssemblyReference.cache
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.Properties.Resources.resources
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.csproj.GenerateResource.cache
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.exe
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.pdb
+E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.loginForm.resources
