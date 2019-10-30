@@ -16,7 +16,7 @@ namespace BRS_Hostel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginForm());
+            Application.Run(new HomeForm());
         }
     }
 }

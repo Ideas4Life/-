@@ -1,6 +1,6 @@
 ﻿namespace BRS_Hostel
 {
-    partial class LoginForm
+    partial class RegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.upPanel = new System.Windows.Forms.Label();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.button = new System.Windows.Forms.Button();
             this.passField = new System.Windows.Forms.TextBox();
@@ -36,12 +37,25 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.сloseButton = new System.Windows.Forms.Label();
-            this.upPanel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // upPanel
+            // 
+            this.upPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.upPanel.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold);
+            this.upPanel.ForeColor = System.Drawing.Color.White;
+            this.upPanel.Location = new System.Drawing.Point(0, 0);
+            this.upPanel.Name = "upPanel";
+            this.upPanel.Size = new System.Drawing.Size(365, 106);
+            this.upPanel.TabIndex = 0;
+            this.upPanel.Text = "Регистрация";
+            this.upPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.upPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseDown);
+            this.upPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseMove);
             // 
             // mainPanel
             // 
@@ -56,10 +70,11 @@
             this.mainPanel.Location = new System.Drawing.Point(0, 0);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(365, 450);
-            this.mainPanel.TabIndex = 0;
+            this.mainPanel.TabIndex = 1;
             // 
             // button
             // 
+            this.button.AutoSize = true;
             this.button.BackColor = System.Drawing.Color.Lime;
             this.button.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -67,13 +82,13 @@
             this.button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LawnGreen;
             this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button.ForeColor = System.Drawing.Color.Black;
-            this.button.Location = new System.Drawing.Point(94, 349);
+            this.button.Location = new System.Drawing.Point(50, 348);
             this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(178, 52);
+            this.button.Size = new System.Drawing.Size(263, 52);
             this.button.TabIndex = 5;
-            this.button.Text = "Войти";
+            this.button.Text = "Зарегестрироваться";
             this.button.UseVisualStyleBackColor = false;
             // 
             // passField
@@ -129,39 +144,23 @@
             this.сloseButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.сloseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.сloseButton.ForeColor = System.Drawing.Color.White;
-            this.сloseButton.Location = new System.Drawing.Point(338, -7);
+            this.сloseButton.Location = new System.Drawing.Point(337, -7);
             this.сloseButton.Name = "сloseButton";
             this.сloseButton.Size = new System.Drawing.Size(28, 33);
             this.сloseButton.TabIndex = 1;
             this.сloseButton.Text = "х";
             this.сloseButton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.сloseButton.Click += new System.EventHandler(this.сloseButton_Click);
-            this.сloseButton.MouseEnter += new System.EventHandler(this.сloseButton_MouseEnter);
-            this.сloseButton.MouseLeave += new System.EventHandler(this.сloseButtom_MouseLeave);
             // 
-            // upPanel
-            // 
-            this.upPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.upPanel.Font = new System.Drawing.Font("Comic Sans MS", 26F, System.Drawing.FontStyle.Bold);
-            this.upPanel.ForeColor = System.Drawing.Color.White;
-            this.upPanel.Location = new System.Drawing.Point(0, 0);
-            this.upPanel.Name = "upPanel";
-            this.upPanel.Size = new System.Drawing.Size(365, 106);
-            this.upPanel.TabIndex = 0;
-            this.upPanel.Text = "Авторизация";
-            this.upPanel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.upPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseDown);
-            this.upPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseMove);
-            // 
-            // LoginForm
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(365, 450);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginForm";
-            this.Text = "loginForm";
+            this.Name = "RegisterForm";
+            this.Text = "RegisterForm";
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -173,14 +172,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel mainPanel;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label upPanel;
-        private System.Windows.Forms.Label сloseButton;
+        private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.Button button;
         private System.Windows.Forms.TextBox passField;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox loginField;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label сloseButton;
     }
 }
