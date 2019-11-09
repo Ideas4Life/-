@@ -100,9 +100,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="images\exit.png" />
     <Content Include="images\lock.png" />
+    <Content Include="images\management.png" />
+    <Content Include="images\medal.png" />
     <Content Include="images\menu.png" />
+    <Content Include="images\profile.png" />
+    <Content Include="images\rating.png" />
     <Content Include="images\user.png" />
+    <Content Include="images\некто.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
