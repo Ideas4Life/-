@@ -1,20 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OleDb;
 
 namespace BRS_Hostel
 {
     public partial class HomeForm : Form
     {
+        public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DB_BRS_Hostel.mdb;";
+        private OleDbConnection myConnection;
+        public static int StId;
         public HomeForm()
         {
             InitializeComponent();
+            // создаем экземпляр класса OleDbConnection
+            myConnection = new OleDbConnection(connectString);
+            // открываем соединение с БД
+            myConnection.Open();
+
             leftPanel.Size = new Size(50, leftPanel.Size.Height);
             subMenu0.Size= new Size(200, 50);
             upPanel.Size = new Size(this.Width, subMenu0.Size.Height);
@@ -27,27 +30,36 @@ namespace BRS_Hostel
             ratingPanel.Hide();
             exitPanel.Hide();
             selectPhoto.Filter = "PNG files(*.png)|*.png|Bitmap files (*.bmp)|*.bmp|Image files (*.jpg)|*.jpg";
+
             //инициализация студента
-            InitializeStud();
+            if (StId >0)
+                InitializeStud();
         }
 
-        private void InitializeStud()
+        public void InitializeStud()
         {
             fullNameStud.AutoSize = true;
-            fullNameStud.Text = "Чепайкин Роман Николаевич";
             facultyStud.AutoSize = true;
-            facultyStud.Text += "ИКТЗИ";
             groupStud.AutoSize = true;
-            groupStud.Text += "4305";
             courseStud.AutoSize = true;
-            courseStud.Text += "3";
             numberTicketStud.AutoSize = true;
-            numberTicketStud.Text += "741069";
             numberRoom.AutoSize = true;
-            numberRoom.Text += "225";
             positionStud.AutoSize = true;
-            positionStud.Text += "пользователь";
 
+            string query = "SELECT * FROM Students WHERE  idStud=" + Convert.ToString(StId);
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            if (reader.Read())
+            {
+                fullNameStud.Text = reader[1].ToString();
+                numberTicketStud.Text += reader[2].ToString();
+                numberRoom.Text += reader[3].ToString();
+                groupStud.Text += reader[4].ToString();
+                facultyStud.Text += reader[5].ToString();
+                courseStud.Text += reader[6].ToString();
+                positionStud.Text += reader[7].ToString();
+            }
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -187,6 +199,8 @@ namespace BRS_Hostel
 
         private void profileBox_Click(object sender, EventArgs e)
         {
+            if (StId > 0)
+                InitializeStud();
             mainPanel.Hide();
             progressPanel.Hide();
             managementPanel.Hide();
@@ -194,6 +208,7 @@ namespace BRS_Hostel
             exitPanel.Hide();
             profilePanel.Show();
             profilePanel.Dock = DockStyle.Fill;
+
         }
 
         private void progressBox_Click(object sender, EventArgs e)
@@ -277,6 +292,12 @@ namespace BRS_Hostel
         {
             hozChasTable.Visible = false;
             KPDTable.Visible = true;
+        }
+
+        private void HomeForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // заркываем соединение с БД
+            myConnection.Close();
         }
     }
 }

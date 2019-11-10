@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.button = new System.Windows.Forms.Button();
+            this.loginButtom = new System.Windows.Forms.Button();
             this.passField = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.loginField = new System.Windows.Forms.TextBox();
@@ -37,6 +37,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.сloseButton = new System.Windows.Forms.Label();
             this.upPanel = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,7 +47,8 @@
             // mainPanel
             // 
             this.mainPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.mainPanel.Controls.Add(this.button);
+            this.mainPanel.Controls.Add(this.errorLabel);
+            this.mainPanel.Controls.Add(this.loginButtom);
             this.mainPanel.Controls.Add(this.passField);
             this.mainPanel.Controls.Add(this.pictureBox2);
             this.mainPanel.Controls.Add(this.loginField);
@@ -58,23 +60,24 @@
             this.mainPanel.Size = new System.Drawing.Size(365, 450);
             this.mainPanel.TabIndex = 0;
             // 
-            // button
+            // loginButtom
             // 
-            this.button.BackColor = System.Drawing.Color.Lime;
-            this.button.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button.FlatAppearance.BorderSize = 0;
-            this.button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LawnGreen;
-            this.button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button.ForeColor = System.Drawing.Color.Black;
-            this.button.Location = new System.Drawing.Point(94, 349);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(178, 52);
-            this.button.TabIndex = 5;
-            this.button.Text = "Войти";
-            this.button.UseVisualStyleBackColor = false;
+            this.loginButtom.BackColor = System.Drawing.Color.Lime;
+            this.loginButtom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginButtom.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.loginButtom.FlatAppearance.BorderSize = 0;
+            this.loginButtom.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.loginButtom.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LawnGreen;
+            this.loginButtom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.loginButtom.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.loginButtom.ForeColor = System.Drawing.Color.Black;
+            this.loginButtom.Location = new System.Drawing.Point(94, 349);
+            this.loginButtom.Name = "loginButtom";
+            this.loginButtom.Size = new System.Drawing.Size(178, 52);
+            this.loginButtom.TabIndex = 5;
+            this.loginButtom.Text = "Войти";
+            this.loginButtom.UseVisualStyleBackColor = false;
+            this.loginButtom.Click += new System.EventHandler(this.loginButtom_Click);
             // 
             // passField
             // 
@@ -153,6 +156,14 @@
             this.upPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseDown);
             this.upPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.upPanel_MouseMove);
             // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Location = new System.Drawing.Point(171, 408);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 15);
+            this.errorLabel.TabIndex = 6;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -181,6 +192,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox loginField;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button loginButtom;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

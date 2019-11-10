@@ -428,9 +428,10 @@
             this.profilePanel.Controls.Add(this.changePhoto);
             this.profilePanel.Controls.Add(this.fullNameStud);
             this.profilePanel.Controls.Add(this.photoStud);
-            this.profilePanel.Location = new System.Drawing.Point(756, 56);
+            this.profilePanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profilePanel.Location = new System.Drawing.Point(200, 50);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(84, 69);
+            this.profilePanel.Size = new System.Drawing.Size(584, 359);
             this.profilePanel.TabIndex = 0;
             this.profilePanel.Click += new System.EventHandler(this.profilePanel_Click);
             // 
@@ -546,10 +547,9 @@
             this.progressPanel.Controls.Add(this.panel1);
             this.progressPanel.Controls.Add(this.KPDTable);
             this.progressPanel.Controls.Add(this.hozChasTable);
-            this.progressPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressPanel.Location = new System.Drawing.Point(200, 50);
+            this.progressPanel.Location = new System.Drawing.Point(746, 353);
             this.progressPanel.Name = "progressPanel";
-            this.progressPanel.Size = new System.Drawing.Size(584, 359);
+            this.progressPanel.Size = new System.Drawing.Size(53, 49);
             this.progressPanel.TabIndex = 0;
             this.progressPanel.Click += new System.EventHandler(this.progressPanel_Click);
             // 
@@ -562,7 +562,7 @@
             this.panel1.Controls.Add(this.HozChas);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(578, 36);
+            this.panel1.Size = new System.Drawing.Size(47, 36);
             this.panel1.TabIndex = 2;
             // 
             // KPD
@@ -1203,17 +1203,18 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(106F, 106F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(784, 409);
-            this.Controls.Add(this.mainPanel);
-            this.Controls.Add(this.exitPanel);
-            this.Controls.Add(this.ratingPanel);
-            this.Controls.Add(this.managementPanel);
             this.Controls.Add(this.progressPanel);
+            this.Controls.Add(this.exitPanel);
+            this.Controls.Add(this.managementPanel);
+            this.Controls.Add(this.ratingPanel);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.profilePanel);
             this.Controls.Add(this.upPanel);
             this.Controls.Add(this.leftPanel);
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "HomeForm";
             this.Text = "HomeForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeForm_FormClosing);
             this.Click += new System.EventHandler(this.HomeForm_Click);
             this.leftPanel.ResumeLayout(false);
             this.subMenu0.ResumeLayout(false);
