@@ -67,12 +67,6 @@
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RegisterForm.cs">
@@ -83,9 +77,6 @@
     </Compile>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -134,14 +125,15 @@
       <DependentUpon>HostelDB.mdf</DependentUpon>
     </Content>
     <Content Include="images\exit.png" />
+    <Content Include="images\home.png" />
     <Content Include="images\lock.png" />
     <Content Include="images\management.png" />
     <Content Include="images\medal.png" />
-    <Content Include="images\menu.png" />
     <Content Include="images\profile.png" />
     <Content Include="images\rating.png" />
     <Content Include="images\user.png" />
     <Content Include="images\некто.png" />
+    <None Include="Resources\home.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

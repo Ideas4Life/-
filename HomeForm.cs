@@ -9,7 +9,7 @@ namespace BRS_Hostel
     {
         public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DB_BRS_Hostel.mdb;";
         private OleDbConnection myConnection;
-        public static int StId;
+        public string StId;
         public HomeForm()
         {
             InitializeComponent();
@@ -18,8 +18,8 @@ namespace BRS_Hostel
             // открываем соединение с БД
             myConnection.Open();
 
-            leftPanel.Size = new Size(50, leftPanel.Size.Height);
-            subMenu0.Size= new Size(200, 50);
+            leftPanel.Size = new Size(45, leftPanel.Size.Height);
+            subMenu0.Size= new Size(200, 45);
             upPanel.Size = new Size(this.Width, subMenu0.Size.Height);
             upPanel.BackColor = subMenu0.BackColor;
             this.Size=new Size((int)(Screen.PrimaryScreen.Bounds.Size.Width/1.7), (int)(Screen.PrimaryScreen.Bounds.Size.Height /1.5));
@@ -30,10 +30,6 @@ namespace BRS_Hostel
             ratingPanel.Hide();
             exitPanel.Hide();
             selectPhoto.Filter = "PNG files(*.png)|*.png|Bitmap files (*.bmp)|*.bmp|Image files (*.jpg)|*.jpg";
-
-            //инициализация студента
-            if (StId >0)
-                InitializeStud();
         }
 
         public void InitializeStud()
@@ -46,8 +42,9 @@ namespace BRS_Hostel
             numberRoom.AutoSize = true;
             positionStud.AutoSize = true;
 
-            string query = "SELECT * FROM Students WHERE  idStud=" + Convert.ToString(StId);
+            string query = "SELECT * FROM Students WHERE  idStud=@uId";
             OleDbCommand command = new OleDbCommand(query, myConnection);
+            command.Parameters.Add("uId", OleDbType.VarChar).Value = StId;
             OleDbDataReader reader = command.ExecuteReader();
 
             if (reader.Read())
@@ -62,26 +59,21 @@ namespace BRS_Hostel
             }
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
-        {
-            LoginForm loginForm = new LoginForm(this);
-            this.Enabled = false;
-            loginForm.Show();
-        }
-
         private void registerButton_Click(object sender, EventArgs e)
         {
             RegisterForm registrForm = new RegisterForm(this);
             this.Enabled = false;
             registrForm.Show();
         }
-        bool hideMenu = true;
-        private void menuBox_Click(object sender, EventArgs e)
+        private void homeBox_Click(object sender, EventArgs e)
         {
-            if (hideMenu)
-                leftPanel.Size = new Size(200, leftPanel.Size.Height);
-            else leftPanel.Size = new Size(50, leftPanel.Size.Height);
-            hideMenu = !hideMenu;
+            mainPanel.Show();
+            mainPanel.Dock = DockStyle.Fill;
+            profilePanel.Hide();
+            progressPanel.Hide();
+            managementPanel.Hide();
+            ratingPanel.Hide();
+            exitPanel.Hide();
         }
 
         private void profile_Click(object sender, EventArgs e)
@@ -138,68 +130,9 @@ namespace BRS_Hostel
             exitPanel.Dock = DockStyle.Fill;
         }
 
-        private void HomeForm_Click(object sender, EventArgs e)
-        {
-            leftPanel.Size = new Size(50, leftPanel.Size.Height);
-        }
-
-        private void mainPanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
-        private void exitPanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
-        private void progressPanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
-        private void profilePanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
-        private void ratingPanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
-        private void managementPanel_Click(object sender, EventArgs e)
-        {
-            if (!hideMenu)
-            {
-                leftPanel.Size = new Size(50, leftPanel.Size.Height);
-                hideMenu = !hideMenu;
-            }
-        }
-
         private void profileBox_Click(object sender, EventArgs e)
         {
-            if (StId > 0)
+            if (Convert.ToInt32(StId) > 0)
                 InitializeStud();
             mainPanel.Hide();
             progressPanel.Hide();
@@ -298,6 +231,25 @@ namespace BRS_Hostel
         {
             // заркываем соединение с БД
             myConnection.Close();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            errorLabel.Visible = false;
+            if (logField.Text.Length != 0 && passField.Text.Length != 0)
+            {
+                string query = "SELECT idStud FROM LoginUser WHERE  login=@uLog AND password=@uPas";
+                OleDbCommand command = new OleDbCommand(query, myConnection);
+                command.Parameters.Add("uLog", OleDbType.VarChar).Value = logField.Text;
+                command.Parameters.Add("uPas", OleDbType.VarChar).Value = passField.Text;
+                string idSt = command.ExecuteScalar().ToString();
+                StId = idSt;
+                InitializeStud();
+            }
+            else
+            {
+                errorLabel.Visible=true;
+            }
         }
     }
 }
