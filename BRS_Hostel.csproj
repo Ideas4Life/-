@@ -117,15 +117,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="HostelDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="HostelDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>HostelDB.mdf</DependentUpon>
-    </Content>
     <Content Include="images\exit.png" />
+    <Content Include="images\fonHostel.jpg" />
     <Content Include="images\home.png" />
+    <Content Include="images\liveHostel.jpg" />
+    <Content Include="images\liveHostelMirror.jpg" />
     <Content Include="images\lock.png" />
     <Content Include="images\management.png" />
     <Content Include="images\medal.png" />

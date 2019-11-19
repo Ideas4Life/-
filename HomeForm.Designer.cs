@@ -28,6 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
             this.leftPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.subMenu0 = new System.Windows.Forms.Panel();
             this.homeBox = new System.Windows.Forms.PictureBox();
@@ -39,12 +58,19 @@
             this.ratingBox = new System.Windows.Forms.PictureBox();
             this.subMenu4 = new System.Windows.Forms.Panel();
             this.managementBox = new System.Windows.Forms.PictureBox();
-            this.subMenu5 = new System.Windows.Forms.Panel();
-            this.exitBox = new System.Windows.Forms.PictureBox();
-            this.registerButton = new System.Windows.Forms.Button();
-            this.upPanel = new System.Windows.Forms.Panel();
+            this.managementPanel = new System.Windows.Forms.Panel();
+            this.ratingPanel = new System.Windows.Forms.Panel();
+            this.ratingTable = new System.Windows.Forms.DataGridView();
+            this.numberStud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameStudRating = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberScoresStud = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.selectPhoto = new System.Windows.Forms.OpenFileDialog();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.nameApplication = new System.Windows.Forms.Label();
+            this.exitBotton = new System.Windows.Forms.Button();
+            this.authorizationPanel = new System.Windows.Forms.Panel();
             this.errorLabel = new System.Windows.Forms.Label();
             this.loginButton = new System.Windows.Forms.Button();
             this.passField = new System.Windows.Forms.TextBox();
@@ -52,78 +78,68 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.autLabel = new System.Windows.Forms.Label();
+            this.progressPanel = new System.Windows.Forms.Panel();
+            this.allScoresLabel = new System.Windows.Forms.Label();
+            this.allProgressTable = new System.Windows.Forms.DataGridView();
+            this.kindProgress = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KPDTable = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberKPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudKPDTable = new System.Windows.Forms.DataGridView();
+            this.kindKPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DateKPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusKPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shtraphKPD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stipendiaTable = new System.Windows.Forms.DataGridView();
+            this.nameStipendia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelStipendia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreStipendia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dopScoresTable = new System.Windows.Forms.DataGridView();
+            this.sanKom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.starostaScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.roomScore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studSovet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.learning = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hozChasTable = new System.Windows.Forms.DataGridView();
+            this.nameHozChas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateHozChas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreHozChas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.сultSportVolontTable = new System.Windows.Forms.DataGridView();
+            this.nameCultSportVolont = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelCultSportVolont = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoreCultSportVolont = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.olympСonfTable = new System.Windows.Forms.DataGridView();
+            this.olympKonf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.levelOlympKonf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultOlympKonf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.scoresOlympKonf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.allProgress = new System.Windows.Forms.PictureBox();
+            this.dop = new System.Windows.Forms.Label();
+            this.cultSportVolont = new System.Windows.Forms.Label();
+            this.olympKonfL = new System.Windows.Forms.Label();
+            this.MyKPD = new System.Windows.Forms.Label();
+            this.stipendia = new System.Windows.Forms.Label();
+            this.KPD = new System.Windows.Forms.Label();
+            this.HozChas = new System.Windows.Forms.Label();
             this.profilePanel = new System.Windows.Forms.Panel();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.facultyStud = new System.Windows.Forms.Label();
             this.positionStud = new System.Windows.Forms.Label();
             this.numberRoom = new System.Windows.Forms.Label();
             this.numberTicketStud = new System.Windows.Forms.Label();
             this.courseStud = new System.Windows.Forms.Label();
             this.groupStud = new System.Windows.Forms.Label();
-            this.facultyStud = new System.Windows.Forms.Label();
+            this.faculty = new System.Windows.Forms.Label();
             this.changePhoto = new System.Windows.Forms.Label();
             this.fullNameStud = new System.Windows.Forms.Label();
             this.photoStud = new System.Windows.Forms.PictureBox();
-            this.progressPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.KPD = new System.Windows.Forms.Label();
-            this.HozChas = new System.Windows.Forms.Label();
-            this.KPDTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.label51 = new System.Windows.Forms.Label();
-            this.label52 = new System.Windows.Forms.Label();
-            this.hozChasTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.managementPanel = new System.Windows.Forms.Panel();
-            this.exitPanel = new System.Windows.Forms.Panel();
-            this.ratingPanel = new System.Windows.Forms.Panel();
-            this.selectPhoto = new System.Windows.Forms.OpenFileDialog();
             this.leftPanel.SuspendLayout();
             this.subMenu0.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.homeBox)).BeginInit();
@@ -135,19 +151,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.ratingBox)).BeginInit();
             this.subMenu4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.managementBox)).BeginInit();
-            this.subMenu5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).BeginInit();
-            this.upPanel.SuspendLayout();
+            this.ratingPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ratingTable)).BeginInit();
             this.mainPanel.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.authorizationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.progressPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allProgressTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KPDTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudKPDTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stipendiaTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dopScoresTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hozChasTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сultSportVolontTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olympСonfTable)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allProgress)).BeginInit();
             this.profilePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.photoStud)).BeginInit();
-            this.progressPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.KPDTable.SuspendLayout();
-            this.hozChasTable.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftPanel
@@ -158,7 +180,6 @@
             this.leftPanel.Controls.Add(this.subMenu2);
             this.leftPanel.Controls.Add(this.subMenu3);
             this.leftPanel.Controls.Add(this.subMenu4);
-            this.leftPanel.Controls.Add(this.subMenu5);
             this.leftPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftPanel.Location = new System.Drawing.Point(0, 0);
             this.leftPanel.Name = "leftPanel";
@@ -168,17 +189,18 @@
             // subMenu0
             // 
             this.subMenu0.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.subMenu0.BackColor = System.Drawing.Color.Fuchsia;
+            this.subMenu0.BackColor = System.Drawing.Color.DarkViolet;
             this.subMenu0.Controls.Add(this.homeBox);
             this.subMenu0.Location = new System.Drawing.Point(0, 0);
             this.subMenu0.Margin = new System.Windows.Forms.Padding(0);
             this.subMenu0.Name = "subMenu0";
-            this.subMenu0.Size = new System.Drawing.Size(200, 45);
+            this.subMenu0.Size = new System.Drawing.Size(45, 45);
             this.subMenu0.TabIndex = 3;
             // 
             // homeBox
             // 
             this.homeBox.BackColor = System.Drawing.Color.OrangeRed;
+            this.homeBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.homeBox.Image = global::BRS_Hostel.Properties.Resources.home;
             this.homeBox.Location = new System.Drawing.Point(0, 0);
             this.homeBox.Margin = new System.Windows.Forms.Padding(0);
@@ -202,6 +224,7 @@
             // 
             // profileBox
             // 
+            this.profileBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.profileBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.profileBox.Image = global::BRS_Hostel.Properties.Resources.profile1;
             this.profileBox.Location = new System.Drawing.Point(0, 0);
@@ -225,6 +248,7 @@
             // 
             // progressBox
             // 
+            this.progressBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.progressBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.progressBox.Image = global::BRS_Hostel.Properties.Resources.medal;
             this.progressBox.Location = new System.Drawing.Point(0, 0);
@@ -248,6 +272,7 @@
             // 
             // ratingBox
             // 
+            this.ratingBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ratingBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.ratingBox.Image = global::BRS_Hostel.Properties.Resources.rating;
             this.ratingBox.Location = new System.Drawing.Point(0, 0);
@@ -271,6 +296,7 @@
             // 
             // managementBox
             // 
+            this.managementBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.managementBox.Dock = System.Windows.Forms.DockStyle.Left;
             this.managementBox.Image = global::BRS_Hostel.Properties.Resources.management;
             this.managementBox.Location = new System.Drawing.Point(0, 0);
@@ -281,89 +307,180 @@
             this.managementBox.TabStop = false;
             this.managementBox.Click += new System.EventHandler(this.managementBox_Click);
             // 
-            // subMenu5
+            // managementPanel
             // 
-            this.subMenu5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.subMenu5.BackColor = System.Drawing.Color.Red;
-            this.subMenu5.Controls.Add(this.exitBox);
-            this.subMenu5.Location = new System.Drawing.Point(0, 225);
-            this.subMenu5.Margin = new System.Windows.Forms.Padding(0);
-            this.subMenu5.Name = "subMenu5";
-            this.subMenu5.Size = new System.Drawing.Size(107, 45);
-            this.subMenu5.TabIndex = 3;
+            this.managementPanel.BackColor = System.Drawing.Color.Transparent;
+            this.managementPanel.BackgroundImage = global::BRS_Hostel.Properties.Resources.fonHostel;
+            this.managementPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.managementPanel.Location = new System.Drawing.Point(45, 0);
+            this.managementPanel.Name = "managementPanel";
+            this.managementPanel.Size = new System.Drawing.Size(739, 409);
+            this.managementPanel.TabIndex = 0;
             // 
-            // exitBox
+            // ratingPanel
             // 
-            this.exitBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.exitBox.Image = global::BRS_Hostel.Properties.Resources.exit;
-            this.exitBox.Location = new System.Drawing.Point(0, 0);
-            this.exitBox.Name = "exitBox";
-            this.exitBox.Size = new System.Drawing.Size(45, 45);
-            this.exitBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.exitBox.TabIndex = 0;
-            this.exitBox.TabStop = false;
-            this.exitBox.Click += new System.EventHandler(this.exitBox_Click);
+            this.ratingPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ratingPanel.BackgroundImage = global::BRS_Hostel.Properties.Resources.fonHostel;
+            this.ratingPanel.Controls.Add(this.ratingTable);
+            this.ratingPanel.Controls.Add(this.label1);
+            this.ratingPanel.Location = new System.Drawing.Point(507, 269);
+            this.ratingPanel.Name = "ratingPanel";
+            this.ratingPanel.Size = new System.Drawing.Size(56, 78);
+            this.ratingPanel.TabIndex = 5;
             // 
-            // registerButton
+            // ratingTable
             // 
-            this.registerButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.registerButton.AutoSize = true;
-            this.registerButton.BackColor = System.Drawing.Color.Lime;
-            this.registerButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.33962F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registerButton.Location = new System.Drawing.Point(434, 1);
-            this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(200, 43);
-            this.registerButton.TabIndex = 1;
-            this.registerButton.Text = "Регистрация";
-            this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            this.ratingTable.AllowUserToAddRows = false;
+            this.ratingTable.AllowUserToDeleteRows = false;
+            this.ratingTable.AllowUserToResizeColumns = false;
+            this.ratingTable.AllowUserToResizeRows = false;
+            this.ratingTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ratingTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ratingTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.ratingTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ratingTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ratingTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.ratingTable.ColumnHeadersHeight = 56;
+            this.ratingTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.ratingTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.numberStud,
+            this.fullNameStudRating,
+            this.numberScoresStud});
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ratingTable.DefaultCellStyle = dataGridViewCellStyle21;
+            this.ratingTable.GridColor = System.Drawing.Color.Silver;
+            this.ratingTable.Location = new System.Drawing.Point(92, 99);
+            this.ratingTable.MultiSelect = false;
+            this.ratingTable.Name = "ratingTable";
+            this.ratingTable.ReadOnly = true;
+            this.ratingTable.RowHeadersVisible = false;
+            this.ratingTable.RowHeadersWidth = 45;
+            this.ratingTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.ratingTable.Size = new System.Drawing.Size(542, 98);
+            this.ratingTable.TabIndex = 4;
             // 
-            // upPanel
+            // numberStud
             // 
-            this.upPanel.BackColor = System.Drawing.Color.Fuchsia;
-            this.upPanel.Controls.Add(this.registerButton);
-            this.upPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.upPanel.Location = new System.Drawing.Point(45, 0);
-            this.upPanel.Name = "upPanel";
-            this.upPanel.Size = new System.Drawing.Size(739, 45);
-            this.upPanel.TabIndex = 3;
+            this.numberStud.FillWeight = 50.80097F;
+            this.numberStud.HeaderText = "Номер";
+            this.numberStud.MinimumWidth = 6;
+            this.numberStud.Name = "numberStud";
+            this.numberStud.ReadOnly = true;
+            // 
+            // fullNameStudRating
+            // 
+            this.fullNameStudRating.FillWeight = 150.3389F;
+            this.fullNameStudRating.HeaderText = "ФИО";
+            this.fullNameStudRating.MinimumWidth = 6;
+            this.fullNameStudRating.Name = "fullNameStudRating";
+            this.fullNameStudRating.ReadOnly = true;
+            // 
+            // numberScoresStud
+            // 
+            this.numberScoresStud.FillWeight = 70.8601F;
+            this.numberScoresStud.HeaderText = "Количество баллов";
+            this.numberScoresStud.MinimumWidth = 6;
+            this.numberScoresStud.Name = "numberScoresStud";
+            this.numberScoresStud.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(257, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(231, 61);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Рейтинг";
+            // 
+            // selectPhoto
+            // 
+            this.selectPhoto.FileName = "photo";
             // 
             // mainPanel
             // 
-            this.mainPanel.BackColor = System.Drawing.Color.Yellow;
-            this.mainPanel.Controls.Add(this.panel4);
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(45, 45);
+            this.mainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.mainPanel.BackgroundImage = global::BRS_Hostel.Properties.Resources.liveHostel;
+            this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.mainPanel.Controls.Add(this.nameApplication);
+            this.mainPanel.Controls.Add(this.exitBotton);
+            this.mainPanel.Controls.Add(this.authorizationPanel);
+            this.mainPanel.Location = new System.Drawing.Point(77, 269);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(739, 364);
+            this.mainPanel.Size = new System.Drawing.Size(169, 78);
             this.mainPanel.TabIndex = 4;
             // 
-            // panel4
+            // nameApplication
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gold;
-            this.panel4.Controls.Add(this.errorLabel);
-            this.panel4.Controls.Add(this.loginButton);
-            this.panel4.Controls.Add(this.passField);
-            this.panel4.Controls.Add(this.logField);
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.pictureBox3);
-            this.panel4.Controls.Add(this.autLabel);
-            this.panel4.Location = new System.Drawing.Point(450, 21);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(230, 286);
-            this.panel4.TabIndex = 2;
+            this.nameApplication.AutoSize = true;
+            this.nameApplication.Font = new System.Drawing.Font("Harlow Solid Italic", 48.22641F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameApplication.Location = new System.Drawing.Point(231, 54);
+            this.nameApplication.Name = "nameApplication";
+            this.nameApplication.Size = new System.Drawing.Size(436, 270);
+            this.nameApplication.TabIndex = 9;
+            this.nameApplication.Text = "БРС \r\nОбщежития \r\n№3";
+            this.nameApplication.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.nameApplication.Visible = false;
+            // 
+            // exitBotton
+            // 
+            this.exitBotton.BackColor = System.Drawing.Color.Lime;
+            this.exitBotton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBotton.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.exitBotton.FlatAppearance.BorderSize = 0;
+            this.exitBotton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.exitBotton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LawnGreen;
+            this.exitBotton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBotton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.exitBotton.ForeColor = System.Drawing.Color.Black;
+            this.exitBotton.Location = new System.Drawing.Point(600, 15);
+            this.exitBotton.Margin = new System.Windows.Forms.Padding(0);
+            this.exitBotton.Name = "exitBotton";
+            this.exitBotton.Size = new System.Drawing.Size(120, 40);
+            this.exitBotton.TabIndex = 8;
+            this.exitBotton.Text = "Выйти";
+            this.exitBotton.UseVisualStyleBackColor = false;
+            this.exitBotton.Visible = false;
+            this.exitBotton.Click += new System.EventHandler(this.exitBotton_Click);
+            // 
+            // authorizationPanel
+            // 
+            this.authorizationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.authorizationPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.authorizationPanel.Controls.Add(this.errorLabel);
+            this.authorizationPanel.Controls.Add(this.loginButton);
+            this.authorizationPanel.Controls.Add(this.passField);
+            this.authorizationPanel.Controls.Add(this.logField);
+            this.authorizationPanel.Controls.Add(this.pictureBox4);
+            this.authorizationPanel.Controls.Add(this.pictureBox3);
+            this.authorizationPanel.Controls.Add(this.autLabel);
+            this.authorizationPanel.Location = new System.Drawing.Point(415, 15);
+            this.authorizationPanel.Name = "authorizationPanel";
+            this.authorizationPanel.Size = new System.Drawing.Size(277, 286);
+            this.authorizationPanel.TabIndex = 2;
             // 
             // errorLabel
             // 
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.errorLabel.Location = new System.Drawing.Point(37, 255);
+            this.errorLabel.Location = new System.Drawing.Point(46, 252);
             this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(164, 20);
+            this.errorLabel.Size = new System.Drawing.Size(182, 20);
             this.errorLabel.TabIndex = 8;
-            this.errorLabel.Text = "Заполните все поля";
+            this.errorLabel.Text = "Некорректные данные";
             this.errorLabel.Visible = false;
             // 
             // loginButton
@@ -377,7 +494,7 @@
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.loginButton.ForeColor = System.Drawing.Color.Black;
-            this.loginButton.Location = new System.Drawing.Point(41, 205);
+            this.loginButton.Location = new System.Drawing.Point(61, 204);
             this.loginButton.Name = "loginButton";
             this.loginButton.Size = new System.Drawing.Size(150, 45);
             this.loginButton.TabIndex = 7;
@@ -390,7 +507,7 @@
             this.passField.Font = new System.Drawing.Font("Times New Roman", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passField.Location = new System.Drawing.Point(61, 153);
             this.passField.Name = "passField";
-            this.passField.Size = new System.Drawing.Size(150, 35);
+            this.passField.Size = new System.Drawing.Size(192, 35);
             this.passField.TabIndex = 6;
             this.passField.UseSystemPasswordChar = true;
             // 
@@ -399,7 +516,7 @@
             this.logField.Font = new System.Drawing.Font("Times New Roman", 16.30189F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.logField.Location = new System.Drawing.Point(61, 88);
             this.logField.Name = "logField";
-            this.logField.Size = new System.Drawing.Size(150, 35);
+            this.logField.Size = new System.Drawing.Size(192, 35);
             this.logField.TabIndex = 5;
             // 
             // pictureBox4
@@ -430,98 +547,909 @@
             this.autLabel.ForeColor = System.Drawing.Color.White;
             this.autLabel.Location = new System.Drawing.Point(0, 0);
             this.autLabel.Name = "autLabel";
-            this.autLabel.Size = new System.Drawing.Size(230, 69);
+            this.autLabel.Size = new System.Drawing.Size(275, 70);
             this.autLabel.TabIndex = 1;
             this.autLabel.Text = "Авторизация";
             this.autLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // progressPanel
+            // 
+            this.progressPanel.BackColor = System.Drawing.Color.Transparent;
+            this.progressPanel.BackgroundImage = global::BRS_Hostel.Properties.Resources.fonHostel;
+            this.progressPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.progressPanel.Controls.Add(this.allScoresLabel);
+            this.progressPanel.Controls.Add(this.allProgressTable);
+            this.progressPanel.Controls.Add(this.KPDTable);
+            this.progressPanel.Controls.Add(this.StudKPDTable);
+            this.progressPanel.Controls.Add(this.stipendiaTable);
+            this.progressPanel.Controls.Add(this.dopScoresTable);
+            this.progressPanel.Controls.Add(this.hozChasTable);
+            this.progressPanel.Controls.Add(this.сultSportVolontTable);
+            this.progressPanel.Controls.Add(this.olympСonfTable);
+            this.progressPanel.Controls.Add(this.panel1);
+            this.progressPanel.Location = new System.Drawing.Point(60, 15);
+            this.progressPanel.Name = "progressPanel";
+            this.progressPanel.Size = new System.Drawing.Size(189, 94);
+            this.progressPanel.TabIndex = 0;
+            // 
+            // allScoresLabel
+            // 
+            this.allScoresLabel.AutoSize = true;
+            this.allScoresLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.30189F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.allScoresLabel.Location = new System.Drawing.Point(300, 320);
+            this.allScoresLabel.Name = "allScoresLabel";
+            this.allScoresLabel.Size = new System.Drawing.Size(87, 29);
+            this.allScoresLabel.TabIndex = 11;
+            this.allScoresLabel.Text = "label1";
+            // 
+            // allProgressTable
+            // 
+            this.allProgressTable.AllowUserToAddRows = false;
+            this.allProgressTable.AllowUserToDeleteRows = false;
+            this.allProgressTable.AllowUserToResizeColumns = false;
+            this.allProgressTable.AllowUserToResizeRows = false;
+            this.allProgressTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.allProgressTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.allProgressTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.allProgressTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.allProgressTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allProgressTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            this.allProgressTable.ColumnHeadersHeight = 56;
+            this.allProgressTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.allProgressTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kindProgress,
+            this.numberScores});
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.allProgressTable.DefaultCellStyle = dataGridViewCellStyle23;
+            this.allProgressTable.GridColor = System.Drawing.Color.Silver;
+            this.allProgressTable.Location = new System.Drawing.Point(17, 155);
+            this.allProgressTable.MultiSelect = false;
+            this.allProgressTable.Name = "allProgressTable";
+            this.allProgressTable.ReadOnly = true;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.allProgressTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.allProgressTable.RowHeadersVisible = false;
+            this.allProgressTable.RowHeadersWidth = 45;
+            this.allProgressTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.allProgressTable.Size = new System.Drawing.Size(219, 43);
+            this.allProgressTable.TabIndex = 10;
+            // 
+            // kindProgress
+            // 
+            this.kindProgress.FillWeight = 155.4404F;
+            this.kindProgress.HeaderText = "Категория достижения";
+            this.kindProgress.MinimumWidth = 6;
+            this.kindProgress.Name = "kindProgress";
+            this.kindProgress.ReadOnly = true;
+            // 
+            // numberScores
+            // 
+            this.numberScores.FillWeight = 44.55959F;
+            this.numberScores.HeaderText = "Количество баллов";
+            this.numberScores.MinimumWidth = 6;
+            this.numberScores.Name = "numberScores";
+            this.numberScores.ReadOnly = true;
+            // 
+            // KPDTable
+            // 
+            this.KPDTable.AllowUserToAddRows = false;
+            this.KPDTable.AllowUserToDeleteRows = false;
+            this.KPDTable.AllowUserToResizeColumns = false;
+            this.KPDTable.AllowUserToResizeRows = false;
+            this.KPDTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.KPDTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.KPDTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.KPDTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.KPDTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.KPDTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            this.KPDTable.ColumnHeadersHeight = 56;
+            this.KPDTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.KPDTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.numberKPD,
+            this.dataGridViewTextBoxColumn4});
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.KPDTable.DefaultCellStyle = dataGridViewCellStyle26;
+            this.KPDTable.GridColor = System.Drawing.Color.Silver;
+            this.KPDTable.Location = new System.Drawing.Point(253, 175);
+            this.KPDTable.MultiSelect = false;
+            this.KPDTable.Name = "KPDTable";
+            this.KPDTable.ReadOnly = true;
+            this.KPDTable.RowHeadersVisible = false;
+            this.KPDTable.RowHeadersWidth = 45;
+            this.KPDTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.KPDTable.Size = new System.Drawing.Size(195, 68);
+            this.KPDTable.TabIndex = 9;
+            this.KPDTable.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Наименования нарушния";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // numberKPD
+            // 
+            this.numberKPD.HeaderText = "Номер нарушения";
+            this.numberKPD.MinimumWidth = 6;
+            this.numberKPD.Name = "numberKPD";
+            this.numberKPD.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Штрафные балы";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // StudKPDTable
+            // 
+            this.StudKPDTable.AllowUserToAddRows = false;
+            this.StudKPDTable.AllowUserToDeleteRows = false;
+            this.StudKPDTable.AllowUserToResizeColumns = false;
+            this.StudKPDTable.AllowUserToResizeRows = false;
+            this.StudKPDTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.StudKPDTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.StudKPDTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.StudKPDTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StudKPDTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.StudKPDTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.StudKPDTable.ColumnHeadersHeight = 56;
+            this.StudKPDTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.StudKPDTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.kindKPD,
+            this.DateKPD,
+            this.statusKPD,
+            this.shtraphKPD});
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudKPDTable.DefaultCellStyle = dataGridViewCellStyle28;
+            this.StudKPDTable.GridColor = System.Drawing.Color.Silver;
+            this.StudKPDTable.Location = new System.Drawing.Point(32, 216);
+            this.StudKPDTable.MultiSelect = false;
+            this.StudKPDTable.Name = "StudKPDTable";
+            this.StudKPDTable.ReadOnly = true;
+            this.StudKPDTable.RowHeadersVisible = false;
+            this.StudKPDTable.RowHeadersWidth = 45;
+            this.StudKPDTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.StudKPDTable.Size = new System.Drawing.Size(204, 63);
+            this.StudKPDTable.TabIndex = 8;
+            this.StudKPDTable.Visible = false;
+            // 
+            // kindKPD
+            // 
+            this.kindKPD.HeaderText = "Наименования нарушния";
+            this.kindKPD.MinimumWidth = 6;
+            this.kindKPD.Name = "kindKPD";
+            this.kindKPD.ReadOnly = true;
+            // 
+            // DateKPD
+            // 
+            this.DateKPD.HeaderText = "Дата ";
+            this.DateKPD.MinimumWidth = 6;
+            this.DateKPD.Name = "DateKPD";
+            this.DateKPD.ReadOnly = true;
+            // 
+            // statusKPD
+            // 
+            this.statusKPD.HeaderText = "Стутус";
+            this.statusKPD.MinimumWidth = 6;
+            this.statusKPD.Name = "statusKPD";
+            this.statusKPD.ReadOnly = true;
+            // 
+            // shtraphKPD
+            // 
+            this.shtraphKPD.HeaderText = "Штрафные балы";
+            this.shtraphKPD.MinimumWidth = 6;
+            this.shtraphKPD.Name = "shtraphKPD";
+            this.shtraphKPD.ReadOnly = true;
+            // 
+            // stipendiaTable
+            // 
+            this.stipendiaTable.AllowUserToAddRows = false;
+            this.stipendiaTable.AllowUserToDeleteRows = false;
+            this.stipendiaTable.AllowUserToResizeColumns = false;
+            this.stipendiaTable.AllowUserToResizeRows = false;
+            this.stipendiaTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.stipendiaTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.stipendiaTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.stipendiaTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.stipendiaTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.stipendiaTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.stipendiaTable.ColumnHeadersHeight = 56;
+            this.stipendiaTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.stipendiaTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameStipendia,
+            this.levelStipendia,
+            this.scoreStipendia});
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.stipendiaTable.DefaultCellStyle = dataGridViewCellStyle30;
+            this.stipendiaTable.GridColor = System.Drawing.Color.Silver;
+            this.stipendiaTable.Location = new System.Drawing.Point(32, 294);
+            this.stipendiaTable.MultiSelect = false;
+            this.stipendiaTable.Name = "stipendiaTable";
+            this.stipendiaTable.ReadOnly = true;
+            this.stipendiaTable.RowHeadersVisible = false;
+            this.stipendiaTable.RowHeadersWidth = 45;
+            this.stipendiaTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.stipendiaTable.Size = new System.Drawing.Size(189, 78);
+            this.stipendiaTable.TabIndex = 7;
+            this.stipendiaTable.Visible = false;
+            // 
+            // nameStipendia
+            // 
+            this.nameStipendia.HeaderText = "Название именной стипендии";
+            this.nameStipendia.MinimumWidth = 6;
+            this.nameStipendia.Name = "nameStipendia";
+            this.nameStipendia.ReadOnly = true;
+            // 
+            // levelStipendia
+            // 
+            this.levelStipendia.HeaderText = "Уровень стипендии";
+            this.levelStipendia.MinimumWidth = 6;
+            this.levelStipendia.Name = "levelStipendia";
+            this.levelStipendia.ReadOnly = true;
+            // 
+            // scoreStipendia
+            // 
+            this.scoreStipendia.HeaderText = "Количество баллов ";
+            this.scoreStipendia.MinimumWidth = 6;
+            this.scoreStipendia.Name = "scoreStipendia";
+            this.scoreStipendia.ReadOnly = true;
+            // 
+            // dopScoresTable
+            // 
+            this.dopScoresTable.AllowUserToAddRows = false;
+            this.dopScoresTable.AllowUserToDeleteRows = false;
+            this.dopScoresTable.AllowUserToResizeColumns = false;
+            this.dopScoresTable.AllowUserToResizeRows = false;
+            this.dopScoresTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dopScoresTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dopScoresTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dopScoresTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dopScoresTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dopScoresTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            this.dopScoresTable.ColumnHeadersHeight = 56;
+            this.dopScoresTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dopScoresTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sanKom,
+            this.starostaScore,
+            this.roomScore,
+            this.studSovet,
+            this.learning});
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dopScoresTable.DefaultCellStyle = dataGridViewCellStyle32;
+            this.dopScoresTable.GridColor = System.Drawing.Color.Silver;
+            this.dopScoresTable.Location = new System.Drawing.Point(476, 147);
+            this.dopScoresTable.MultiSelect = false;
+            this.dopScoresTable.Name = "dopScoresTable";
+            this.dopScoresTable.ReadOnly = true;
+            this.dopScoresTable.RowHeadersVisible = false;
+            this.dopScoresTable.RowHeadersWidth = 45;
+            this.dopScoresTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dopScoresTable.Size = new System.Drawing.Size(172, 59);
+            this.dopScoresTable.TabIndex = 6;
+            this.dopScoresTable.Visible = false;
+            // 
+            // sanKom
+            // 
+            this.sanKom.HeaderText = "Средний бал сан комиссии";
+            this.sanKom.MinimumWidth = 6;
+            this.sanKom.Name = "sanKom";
+            this.sanKom.ReadOnly = true;
+            // 
+            // starostaScore
+            // 
+            this.starostaScore.HeaderText = "Балы старосты";
+            this.starostaScore.MinimumWidth = 6;
+            this.starostaScore.Name = "starostaScore";
+            this.starostaScore.ReadOnly = true;
+            // 
+            // roomScore
+            // 
+            this.roomScore.HeaderText = "Ремонт комнаты";
+            this.roomScore.MinimumWidth = 6;
+            this.roomScore.Name = "roomScore";
+            this.roomScore.ReadOnly = true;
+            // 
+            // studSovet
+            // 
+            this.studSovet.HeaderText = "Членство в студ совете";
+            this.studSovet.MinimumWidth = 6;
+            this.studSovet.Name = "studSovet";
+            this.studSovet.ReadOnly = true;
+            // 
+            // learning
+            // 
+            this.learning.HeaderText = "Средний бал за учебу";
+            this.learning.MinimumWidth = 6;
+            this.learning.Name = "learning";
+            this.learning.ReadOnly = true;
+            // 
+            // hozChasTable
+            // 
+            this.hozChasTable.AllowUserToAddRows = false;
+            this.hozChasTable.AllowUserToDeleteRows = false;
+            this.hozChasTable.AllowUserToResizeColumns = false;
+            this.hozChasTable.AllowUserToResizeRows = false;
+            this.hozChasTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.hozChasTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.hozChasTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.hozChasTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.hozChasTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.hozChasTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            this.hozChasTable.ColumnHeadersHeight = 56;
+            this.hozChasTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.hozChasTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameHozChas,
+            this.dateHozChas,
+            this.scoreHozChas});
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.hozChasTable.DefaultCellStyle = dataGridViewCellStyle34;
+            this.hozChasTable.GridColor = System.Drawing.Color.Silver;
+            this.hozChasTable.Location = new System.Drawing.Point(257, 81);
+            this.hozChasTable.MultiSelect = false;
+            this.hozChasTable.Name = "hozChasTable";
+            this.hozChasTable.ReadOnly = true;
+            this.hozChasTable.RowHeadersVisible = false;
+            this.hozChasTable.RowHeadersWidth = 45;
+            this.hozChasTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.hozChasTable.Size = new System.Drawing.Size(275, 60);
+            this.hozChasTable.TabIndex = 5;
+            this.hozChasTable.Visible = false;
+            // 
+            // nameHozChas
+            // 
+            this.nameHozChas.HeaderText = "Название мероприятия";
+            this.nameHozChas.MinimumWidth = 6;
+            this.nameHozChas.Name = "nameHozChas";
+            this.nameHozChas.ReadOnly = true;
+            // 
+            // dateHozChas
+            // 
+            this.dateHozChas.HeaderText = "Дата ";
+            this.dateHozChas.MinimumWidth = 6;
+            this.dateHozChas.Name = "dateHozChas";
+            this.dateHozChas.ReadOnly = true;
+            // 
+            // scoreHozChas
+            // 
+            this.scoreHozChas.HeaderText = "Количество баллов";
+            this.scoreHozChas.MinimumWidth = 6;
+            this.scoreHozChas.Name = "scoreHozChas";
+            this.scoreHozChas.ReadOnly = true;
+            // 
+            // сultSportVolontTable
+            // 
+            this.сultSportVolontTable.AllowUserToAddRows = false;
+            this.сultSportVolontTable.AllowUserToDeleteRows = false;
+            this.сultSportVolontTable.AllowUserToResizeColumns = false;
+            this.сultSportVolontTable.AllowUserToResizeRows = false;
+            this.сultSportVolontTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.сultSportVolontTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.сultSportVolontTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.сultSportVolontTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.сultSportVolontTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.сultSportVolontTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            this.сultSportVolontTable.ColumnHeadersHeight = 56;
+            this.сultSportVolontTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.сultSportVolontTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameCultSportVolont,
+            this.levelCultSportVolont,
+            this.scoreCultSportVolont});
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle36.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.сultSportVolontTable.DefaultCellStyle = dataGridViewCellStyle36;
+            this.сultSportVolontTable.GridColor = System.Drawing.Color.Silver;
+            this.сultSportVolontTable.Location = new System.Drawing.Point(447, 245);
+            this.сultSportVolontTable.MultiSelect = false;
+            this.сultSportVolontTable.Name = "сultSportVolontTable";
+            this.сultSportVolontTable.ReadOnly = true;
+            this.сultSportVolontTable.RowHeadersVisible = false;
+            this.сultSportVolontTable.RowHeadersWidth = 45;
+            this.сultSportVolontTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.сultSportVolontTable.Size = new System.Drawing.Size(227, 51);
+            this.сultSportVolontTable.TabIndex = 4;
+            this.сultSportVolontTable.Visible = false;
+            // 
+            // nameCultSportVolont
+            // 
+            this.nameCultSportVolont.HeaderText = "Название мероприятия";
+            this.nameCultSportVolont.MinimumWidth = 6;
+            this.nameCultSportVolont.Name = "nameCultSportVolont";
+            this.nameCultSportVolont.ReadOnly = true;
+            // 
+            // levelCultSportVolont
+            // 
+            this.levelCultSportVolont.HeaderText = "Уровень";
+            this.levelCultSportVolont.MinimumWidth = 6;
+            this.levelCultSportVolont.Name = "levelCultSportVolont";
+            this.levelCultSportVolont.ReadOnly = true;
+            // 
+            // scoreCultSportVolont
+            // 
+            this.scoreCultSportVolont.HeaderText = "Количество баллов";
+            this.scoreCultSportVolont.MinimumWidth = 6;
+            this.scoreCultSportVolont.Name = "scoreCultSportVolont";
+            this.scoreCultSportVolont.ReadOnly = true;
+            // 
+            // olympСonfTable
+            // 
+            this.olympСonfTable.AllowUserToAddRows = false;
+            this.olympСonfTable.AllowUserToDeleteRows = false;
+            this.olympСonfTable.AllowUserToResizeColumns = false;
+            this.olympСonfTable.AllowUserToResizeRows = false;
+            this.olympСonfTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.olympСonfTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.olympСonfTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(234)))), ((int)(((byte)(226)))));
+            this.olympСonfTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.olympСonfTable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.olympСonfTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            this.olympСonfTable.ColumnHeadersHeight = 56;
+            this.olympСonfTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.olympСonfTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.olympKonf,
+            this.levelOlympKonf,
+            this.resultOlympKonf,
+            this.scoresOlympKonf});
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.471698F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.olympСonfTable.DefaultCellStyle = dataGridViewCellStyle38;
+            this.olympСonfTable.GridColor = System.Drawing.Color.Silver;
+            this.olympСonfTable.Location = new System.Drawing.Point(32, 84);
+            this.olympСonfTable.MultiSelect = false;
+            this.olympСonfTable.Name = "olympСonfTable";
+            this.olympСonfTable.ReadOnly = true;
+            this.olympСonfTable.RowHeadersVisible = false;
+            this.olympСonfTable.RowHeadersWidth = 45;
+            this.olympСonfTable.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.olympСonfTable.Size = new System.Drawing.Size(219, 43);
+            this.olympСonfTable.TabIndex = 3;
+            // 
+            // olympKonf
+            // 
+            this.olympKonf.HeaderText = "Название мероприятия";
+            this.olympKonf.MinimumWidth = 6;
+            this.olympKonf.Name = "olympKonf";
+            this.olympKonf.ReadOnly = true;
+            // 
+            // levelOlympKonf
+            // 
+            this.levelOlympKonf.HeaderText = "Уровень";
+            this.levelOlympKonf.MinimumWidth = 6;
+            this.levelOlympKonf.Name = "levelOlympKonf";
+            this.levelOlympKonf.ReadOnly = true;
+            // 
+            // resultOlympKonf
+            // 
+            this.resultOlympKonf.HeaderText = "Результат";
+            this.resultOlympKonf.MinimumWidth = 6;
+            this.resultOlympKonf.Name = "resultOlympKonf";
+            this.resultOlympKonf.ReadOnly = true;
+            // 
+            // scoresOlympKonf
+            // 
+            this.scoresOlympKonf.HeaderText = "Количество баллов";
+            this.scoresOlympKonf.MinimumWidth = 6;
+            this.scoresOlympKonf.Name = "scoresOlympKonf";
+            this.scoresOlympKonf.ReadOnly = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.allProgress);
+            this.panel1.Controls.Add(this.dop);
+            this.panel1.Controls.Add(this.cultSportVolont);
+            this.panel1.Controls.Add(this.olympKonfL);
+            this.panel1.Controls.Add(this.MyKPD);
+            this.panel1.Controls.Add(this.stipendia);
+            this.panel1.Controls.Add(this.KPD);
+            this.panel1.Controls.Add(this.HozChas);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(183, 71);
+            this.panel1.TabIndex = 2;
+            // 
+            // allProgress
+            // 
+            this.allProgress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.allProgress.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.allProgress.Image = global::BRS_Hostel.Properties.Resources.home1;
+            this.allProgress.Location = new System.Drawing.Point(10, 7);
+            this.allProgress.Name = "allProgress";
+            this.allProgress.Size = new System.Drawing.Size(52, 52);
+            this.allProgress.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.allProgress.TabIndex = 7;
+            this.allProgress.TabStop = false;
+            this.allProgress.Click += new System.EventHandler(this.allProgress_Click);
+            // 
+            // dop
+            // 
+            this.dop.AutoSize = true;
+            this.dop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dop.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dop.Location = new System.Drawing.Point(344, 7);
+            this.dop.Name = "dop";
+            this.dop.Size = new System.Drawing.Size(95, 24);
+            this.dop.TabIndex = 6;
+            this.dop.Text = "Доп балы";
+            this.dop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dop.Click += new System.EventHandler(this.dop_Click);
+            // 
+            // cultSportVolont
+            // 
+            this.cultSportVolont.AutoSize = true;
+            this.cultSportVolont.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.cultSportVolont.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cultSportVolont.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cultSportVolont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cultSportVolont.Location = new System.Drawing.Point(454, 10);
+            this.cultSportVolont.Name = "cultSportVolont";
+            this.cultSportVolont.Size = new System.Drawing.Size(272, 48);
+            this.cultSportVolont.TabIndex = 5;
+            this.cultSportVolont.Text = "Спортивные, общественные \r\nмероприятия";
+            this.cultSportVolont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cultSportVolont.Click += new System.EventHandler(this.cultSportVolont_Click);
+            // 
+            // olympKonfL
+            // 
+            this.olympKonfL.AutoSize = true;
+            this.olympKonfL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.olympKonfL.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.olympKonfL.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.olympKonfL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.olympKonfL.Location = new System.Drawing.Point(69, 36);
+            this.olympKonfL.Name = "olympKonfL";
+            this.olympKonfL.Size = new System.Drawing.Size(259, 24);
+            this.olympKonfL.TabIndex = 4;
+            this.olympKonfL.Text = "Олимпиады и конференции";
+            this.olympKonfL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.olympKonfL.Click += new System.EventHandler(this.olympKonf_Click);
+            // 
+            // MyKPD
+            // 
+            this.MyKPD.AutoSize = true;
+            this.MyKPD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.MyKPD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MyKPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyKPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MyKPD.Location = new System.Drawing.Point(236, 7);
+            this.MyKPD.Name = "MyKPD";
+            this.MyKPD.Size = new System.Drawing.Size(92, 24);
+            this.MyKPD.TabIndex = 3;
+            this.MyKPD.Text = "Мои КПД";
+            this.MyKPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MyKPD.Click += new System.EventHandler(this.MyKPD_Click);
+            // 
+            // stipendia
+            // 
+            this.stipendia.AutoSize = true;
+            this.stipendia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.stipendia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.stipendia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.stipendia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.stipendia.Location = new System.Drawing.Point(337, 36);
+            this.stipendia.Name = "stipendia";
+            this.stipendia.Size = new System.Drawing.Size(111, 24);
+            this.stipendia.TabIndex = 2;
+            this.stipendia.Text = "Стипендии";
+            this.stipendia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.stipendia.Click += new System.EventHandler(this.stipendia_Click);
+            // 
+            // KPD
+            // 
+            this.KPD.AutoSize = true;
+            this.KPD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.KPD.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.KPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.KPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.KPD.Location = new System.Drawing.Point(171, 7);
+            this.KPD.Name = "KPD";
+            this.KPD.Size = new System.Drawing.Size(49, 24);
+            this.KPD.TabIndex = 1;
+            this.KPD.Text = "КПД";
+            this.KPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.KPD.Click += new System.EventHandler(this.KPD_Click);
+            // 
+            // HozChas
+            // 
+            this.HozChas.AutoSize = true;
+            this.HozChas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.HozChas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.HozChas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.HozChas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HozChas.Location = new System.Drawing.Point(69, 7);
+            this.HozChas.Name = "HozChas";
+            this.HozChas.Size = new System.Drawing.Size(91, 24);
+            this.HozChas.TabIndex = 0;
+            this.HozChas.Text = "Хоз часы";
+            this.HozChas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HozChas.Click += new System.EventHandler(this.HozChas_Click);
+            // 
             // profilePanel
             // 
-            this.profilePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.profilePanel.BackColor = System.Drawing.Color.Transparent;
+            this.profilePanel.BackgroundImage = global::BRS_Hostel.Properties.Resources.liveHostelMirror;
+            this.profilePanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.profilePanel.Controls.Add(this.label57);
+            this.profilePanel.Controls.Add(this.label56);
+            this.profilePanel.Controls.Add(this.label55);
+            this.profilePanel.Controls.Add(this.label54);
+            this.profilePanel.Controls.Add(this.label53);
+            this.profilePanel.Controls.Add(this.facultyStud);
             this.profilePanel.Controls.Add(this.positionStud);
             this.profilePanel.Controls.Add(this.numberRoom);
             this.profilePanel.Controls.Add(this.numberTicketStud);
             this.profilePanel.Controls.Add(this.courseStud);
             this.profilePanel.Controls.Add(this.groupStud);
-            this.profilePanel.Controls.Add(this.facultyStud);
+            this.profilePanel.Controls.Add(this.faculty);
             this.profilePanel.Controls.Add(this.changePhoto);
             this.profilePanel.Controls.Add(this.fullNameStud);
             this.profilePanel.Controls.Add(this.photoStud);
-            this.profilePanel.Location = new System.Drawing.Point(756, 66);
+            this.profilePanel.Location = new System.Drawing.Point(341, 57);
             this.profilePanel.Name = "profilePanel";
-            this.profilePanel.Size = new System.Drawing.Size(76, 55);
+            this.profilePanel.Size = new System.Drawing.Size(251, 156);
             this.profilePanel.TabIndex = 0;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.Transparent;
+            this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label57.Location = new System.Drawing.Point(150, 134);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(72, 25);
+            this.label57.TabIndex = 14;
+            this.label57.Text = "Курс: ";
+            this.label57.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.Transparent;
+            this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label56.Location = new System.Drawing.Point(150, 99);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(83, 25);
+            this.label56.TabIndex = 13;
+            this.label56.Text = "Група: ";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.Transparent;
+            this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label55.Location = new System.Drawing.Point(150, 248);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(131, 25);
+            this.label55.TabIndex = 12;
+            this.label55.Text = "должность: ";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.BackColor = System.Drawing.Color.Transparent;
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label54.Location = new System.Drawing.Point(150, 212);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(138, 25);
+            this.label54.TabIndex = 11;
+            this.label54.Text = "№ комнаты: ";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.BackColor = System.Drawing.Color.Transparent;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label53.Location = new System.Drawing.Point(150, 174);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(165, 25);
+            this.label53.TabIndex = 10;
+            this.label53.Text = "№ студ. билет: ";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // facultyStud
+            // 
+            this.facultyStud.BackColor = System.Drawing.Color.Transparent;
+            this.facultyStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.facultyStud.Location = new System.Drawing.Point(252, 63);
+            this.facultyStud.Name = "facultyStud";
+            this.facultyStud.Size = new System.Drawing.Size(110, 27);
+            this.facultyStud.TabIndex = 9;
+            this.facultyStud.Text = "ИКТЗИ";
+            this.facultyStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // positionStud
             // 
-            this.positionStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.positionStud.AutoSize = true;
+            this.positionStud.BackColor = System.Drawing.Color.Transparent;
             this.positionStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.positionStud.Location = new System.Drawing.Point(200, 248);
+            this.positionStud.Location = new System.Drawing.Point(277, 248);
             this.positionStud.Name = "positionStud";
-            this.positionStud.Size = new System.Drawing.Size(231, 27);
+            this.positionStud.Size = new System.Drawing.Size(54, 25);
             this.positionStud.TabIndex = 8;
-            this.positionStud.Text = "должность: ";
+            this.positionStud.Text = "user";
             this.positionStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numberRoom
             // 
-            this.numberRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.numberRoom.AutoSize = true;
+            this.numberRoom.BackColor = System.Drawing.Color.Transparent;
             this.numberRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberRoom.Location = new System.Drawing.Point(200, 211);
+            this.numberRoom.Location = new System.Drawing.Point(283, 212);
             this.numberRoom.Name = "numberRoom";
-            this.numberRoom.Size = new System.Drawing.Size(231, 27);
+            this.numberRoom.Size = new System.Drawing.Size(48, 25);
             this.numberRoom.TabIndex = 7;
-            this.numberRoom.Text = "№ комнаты: ";
+            this.numberRoom.Text = "438";
             this.numberRoom.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // numberTicketStud
             // 
-            this.numberTicketStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.numberTicketStud.AutoSize = true;
+            this.numberTicketStud.BackColor = System.Drawing.Color.Transparent;
             this.numberTicketStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberTicketStud.Location = new System.Drawing.Point(200, 172);
+            this.numberTicketStud.Location = new System.Drawing.Point(310, 174);
             this.numberTicketStud.Name = "numberTicketStud";
-            this.numberTicketStud.Size = new System.Drawing.Size(231, 27);
+            this.numberTicketStud.Size = new System.Drawing.Size(84, 25);
             this.numberTicketStud.TabIndex = 6;
-            this.numberTicketStud.Text = "№ студ. билет: ";
+            this.numberTicketStud.Text = "123456";
             this.numberTicketStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // courseStud
             // 
-            this.courseStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.courseStud.AutoSize = true;
+            this.courseStud.BackColor = System.Drawing.Color.Transparent;
             this.courseStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.courseStud.Location = new System.Drawing.Point(200, 135);
+            this.courseStud.Location = new System.Drawing.Point(217, 134);
             this.courseStud.Name = "courseStud";
-            this.courseStud.Size = new System.Drawing.Size(231, 27);
+            this.courseStud.Size = new System.Drawing.Size(30, 25);
             this.courseStud.TabIndex = 5;
-            this.courseStud.Text = "Курс: ";
+            this.courseStud.Text = "1 ";
             this.courseStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupStud
             // 
-            this.groupStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.groupStud.AutoSize = true;
+            this.groupStud.BackColor = System.Drawing.Color.Transparent;
             this.groupStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupStud.Location = new System.Drawing.Point(200, 99);
+            this.groupStud.Location = new System.Drawing.Point(230, 99);
             this.groupStud.Name = "groupStud";
-            this.groupStud.Size = new System.Drawing.Size(231, 27);
+            this.groupStud.Size = new System.Drawing.Size(60, 25);
             this.groupStud.TabIndex = 4;
-            this.groupStud.Text = "Група: ";
+            this.groupStud.Text = "4109";
             this.groupStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // facultyStud
+            // faculty
             // 
-            this.facultyStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.facultyStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.facultyStud.Location = new System.Drawing.Point(200, 63);
-            this.facultyStud.Name = "facultyStud";
-            this.facultyStud.Size = new System.Drawing.Size(189, 27);
-            this.facultyStud.TabIndex = 3;
-            this.facultyStud.Text = "Институт: ";
-            this.facultyStud.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.faculty.BackColor = System.Drawing.Color.Transparent;
+            this.faculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.26415F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.faculty.Location = new System.Drawing.Point(150, 63);
+            this.faculty.Name = "faculty";
+            this.faculty.Size = new System.Drawing.Size(110, 27);
+            this.faculty.TabIndex = 3;
+            this.faculty.Text = "Институт: ";
+            this.faculty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // changePhoto
             // 
             this.changePhoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.150944F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changePhoto.Location = new System.Drawing.Point(30, 158);
+            this.changePhoto.Location = new System.Drawing.Point(26, 158);
             this.changePhoto.Name = "changePhoto";
             this.changePhoto.Size = new System.Drawing.Size(100, 32);
             this.changePhoto.TabIndex = 2;
@@ -535,9 +1463,9 @@
             // 
             // fullNameStud
             // 
-            this.fullNameStud.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.fullNameStud.BackColor = System.Drawing.Color.Transparent;
             this.fullNameStud.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.69811F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fullNameStud.Location = new System.Drawing.Point(156, 16);
+            this.fullNameStud.Location = new System.Drawing.Point(139, 14);
             this.fullNameStud.Name = "fullNameStud";
             this.fullNameStud.Size = new System.Drawing.Size(231, 37);
             this.fullNameStud.TabIndex = 1;
@@ -549,7 +1477,7 @@
             this.photoStud.BackColor = System.Drawing.Color.White;
             this.photoStud.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.photoStud.Image = global::BRS_Hostel.Properties.Resources.некто;
-            this.photoStud.Location = new System.Drawing.Point(24, 18);
+            this.photoStud.Location = new System.Drawing.Point(21, 18);
             this.photoStud.MaximumSize = new System.Drawing.Size(150, 175);
             this.photoStud.MinimumSize = new System.Drawing.Size(100, 130);
             this.photoStud.Name = "photoStud";
@@ -558,672 +1486,18 @@
             this.photoStud.TabIndex = 0;
             this.photoStud.TabStop = false;
             // 
-            // progressPanel
-            // 
-            this.progressPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.progressPanel.Controls.Add(this.panel1);
-            this.progressPanel.Controls.Add(this.KPDTable);
-            this.progressPanel.Controls.Add(this.hozChasTable);
-            this.progressPanel.Location = new System.Drawing.Point(746, 353);
-            this.progressPanel.Name = "progressPanel";
-            this.progressPanel.Size = new System.Drawing.Size(53, 49);
-            this.progressPanel.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.panel1.Controls.Add(this.KPD);
-            this.panel1.Controls.Add(this.HozChas);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(47, 36);
-            this.panel1.TabIndex = 2;
-            // 
-            // KPD
-            // 
-            this.KPD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.KPD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.KPD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.KPD.Location = new System.Drawing.Point(123, 7);
-            this.KPD.Name = "KPD";
-            this.KPD.Size = new System.Drawing.Size(100, 23);
-            this.KPD.TabIndex = 1;
-            this.KPD.Text = "КПД";
-            this.KPD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.KPD.Click += new System.EventHandler(this.KPD_Click);
-            // 
-            // HozChas
-            // 
-            this.HozChas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.HozChas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.HozChas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.22642F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.HozChas.Location = new System.Drawing.Point(9, 7);
-            this.HozChas.Name = "HozChas";
-            this.HozChas.Size = new System.Drawing.Size(100, 23);
-            this.HozChas.TabIndex = 0;
-            this.HozChas.Text = "Хоз часы";
-            this.HozChas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.HozChas.Click += new System.EventHandler(this.HozChas_Click);
-            // 
-            // KPDTable
-            // 
-            this.KPDTable.AutoScroll = true;
-            this.KPDTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.KPDTable.ColumnCount = 2;
-            this.KPDTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KPDTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.KPDTable.Controls.Add(this.label27, 1, 12);
-            this.KPDTable.Controls.Add(this.label28, 0, 12);
-            this.KPDTable.Controls.Add(this.label29, 1, 11);
-            this.KPDTable.Controls.Add(this.label30, 0, 11);
-            this.KPDTable.Controls.Add(this.label31, 1, 10);
-            this.KPDTable.Controls.Add(this.label32, 0, 10);
-            this.KPDTable.Controls.Add(this.label33, 1, 9);
-            this.KPDTable.Controls.Add(this.label34, 1, 8);
-            this.KPDTable.Controls.Add(this.label35, 0, 8);
-            this.KPDTable.Controls.Add(this.label36, 1, 7);
-            this.KPDTable.Controls.Add(this.label37, 0, 7);
-            this.KPDTable.Controls.Add(this.label38, 1, 6);
-            this.KPDTable.Controls.Add(this.label39, 0, 6);
-            this.KPDTable.Controls.Add(this.label40, 1, 5);
-            this.KPDTable.Controls.Add(this.label41, 0, 5);
-            this.KPDTable.Controls.Add(this.label42, 1, 4);
-            this.KPDTable.Controls.Add(this.label43, 0, 4);
-            this.KPDTable.Controls.Add(this.label44, 1, 3);
-            this.KPDTable.Controls.Add(this.label45, 0, 3);
-            this.KPDTable.Controls.Add(this.label46, 1, 2);
-            this.KPDTable.Controls.Add(this.label47, 0, 2);
-            this.KPDTable.Controls.Add(this.label48, 1, 1);
-            this.KPDTable.Controls.Add(this.label49, 0, 1);
-            this.KPDTable.Controls.Add(this.label50, 1, 0);
-            this.KPDTable.Controls.Add(this.label51, 0, 9);
-            this.KPDTable.Controls.Add(this.label52, 0, 0);
-            this.KPDTable.Location = new System.Drawing.Point(130, 45);
-            this.KPDTable.Name = "KPDTable";
-            this.KPDTable.RowCount = 13;
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.KPDTable.Size = new System.Drawing.Size(100, 230);
-            this.KPDTable.TabIndex = 1;
-            this.KPDTable.Visible = false;
-            // 
-            // label27
-            // 
-            this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(47, 279);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(32, 20);
-            this.label27.TabIndex = 25;
-            this.label27.Text = "label27";
-            // 
-            // label28
-            // 
-            this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(6, 279);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(32, 20);
-            this.label28.TabIndex = 24;
-            this.label28.Text = "label28";
-            // 
-            // label29
-            // 
-            this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(47, 256);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(32, 20);
-            this.label29.TabIndex = 23;
-            this.label29.Text = "label29";
-            // 
-            // label30
-            // 
-            this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(6, 256);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(32, 20);
-            this.label30.TabIndex = 22;
-            this.label30.Text = "label30";
-            // 
-            // label31
-            // 
-            this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(47, 233);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(32, 20);
-            this.label31.TabIndex = 21;
-            this.label31.Text = "label31";
-            // 
-            // label32
-            // 
-            this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(6, 233);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(32, 20);
-            this.label32.TabIndex = 20;
-            this.label32.Text = "label32";
-            // 
-            // label33
-            // 
-            this.label33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label33.Location = new System.Drawing.Point(47, 210);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(32, 20);
-            this.label33.TabIndex = 19;
-            this.label33.Text = "label33";
-            // 
-            // label34
-            // 
-            this.label34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label34.Location = new System.Drawing.Point(47, 187);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(32, 20);
-            this.label34.TabIndex = 18;
-            this.label34.Text = "label34";
-            // 
-            // label35
-            // 
-            this.label35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label35.Location = new System.Drawing.Point(6, 187);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(32, 20);
-            this.label35.TabIndex = 17;
-            this.label35.Text = "label35";
-            // 
-            // label36
-            // 
-            this.label36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label36.Location = new System.Drawing.Point(47, 164);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(32, 20);
-            this.label36.TabIndex = 16;
-            this.label36.Text = "label36";
-            // 
-            // label37
-            // 
-            this.label37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label37.Location = new System.Drawing.Point(6, 164);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(32, 20);
-            this.label37.TabIndex = 15;
-            this.label37.Text = "label37";
-            // 
-            // label38
-            // 
-            this.label38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label38.Location = new System.Drawing.Point(47, 141);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(32, 20);
-            this.label38.TabIndex = 14;
-            this.label38.Text = "label38";
-            // 
-            // label39
-            // 
-            this.label39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label39.Location = new System.Drawing.Point(6, 141);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(32, 20);
-            this.label39.TabIndex = 13;
-            this.label39.Text = "label39";
-            // 
-            // label40
-            // 
-            this.label40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label40.Location = new System.Drawing.Point(47, 118);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(32, 20);
-            this.label40.TabIndex = 12;
-            this.label40.Text = "label40";
-            // 
-            // label41
-            // 
-            this.label41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label41.Location = new System.Drawing.Point(6, 118);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(32, 20);
-            this.label41.TabIndex = 11;
-            this.label41.Text = "label41";
-            // 
-            // label42
-            // 
-            this.label42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label42.Location = new System.Drawing.Point(47, 95);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(32, 20);
-            this.label42.TabIndex = 10;
-            this.label42.Text = "label42";
-            // 
-            // label43
-            // 
-            this.label43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label43.Location = new System.Drawing.Point(6, 95);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(32, 20);
-            this.label43.TabIndex = 9;
-            this.label43.Text = "label43";
-            // 
-            // label44
-            // 
-            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label44.Location = new System.Drawing.Point(47, 72);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(32, 20);
-            this.label44.TabIndex = 8;
-            this.label44.Text = "label44";
-            // 
-            // label45
-            // 
-            this.label45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label45.Location = new System.Drawing.Point(6, 72);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(32, 20);
-            this.label45.TabIndex = 7;
-            this.label45.Text = "label45";
-            // 
-            // label46
-            // 
-            this.label46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label46.Location = new System.Drawing.Point(47, 49);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(32, 20);
-            this.label46.TabIndex = 6;
-            this.label46.Text = "label46";
-            // 
-            // label47
-            // 
-            this.label47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label47.Location = new System.Drawing.Point(6, 49);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(32, 20);
-            this.label47.TabIndex = 5;
-            this.label47.Text = "label47";
-            // 
-            // label48
-            // 
-            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label48.Location = new System.Drawing.Point(47, 26);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(32, 20);
-            this.label48.TabIndex = 4;
-            this.label48.Text = "label48";
-            // 
-            // label49
-            // 
-            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label49.Location = new System.Drawing.Point(6, 26);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(32, 20);
-            this.label49.TabIndex = 3;
-            this.label49.Text = "label49";
-            // 
-            // label50
-            // 
-            this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label50.Location = new System.Drawing.Point(47, 3);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(32, 20);
-            this.label50.TabIndex = 1;
-            this.label50.Text = "label50";
-            // 
-            // label51
-            // 
-            this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(6, 210);
-            this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(31, 20);
-            this.label51.TabIndex = 2;
-            this.label51.Text = "label51";
-            // 
-            // label52
-            // 
-            this.label52.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label52.Location = new System.Drawing.Point(6, 3);
-            this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(32, 20);
-            this.label52.TabIndex = 0;
-            this.label52.Text = "label52";
-            // 
-            // hozChasTable
-            // 
-            this.hozChasTable.AutoScroll = true;
-            this.hozChasTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
-            this.hozChasTable.ColumnCount = 2;
-            this.hozChasTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.hozChasTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.hozChasTable.Controls.Add(this.label26, 1, 12);
-            this.hozChasTable.Controls.Add(this.label25, 0, 12);
-            this.hozChasTable.Controls.Add(this.label24, 1, 11);
-            this.hozChasTable.Controls.Add(this.label23, 0, 11);
-            this.hozChasTable.Controls.Add(this.label22, 1, 10);
-            this.hozChasTable.Controls.Add(this.label21, 0, 10);
-            this.hozChasTable.Controls.Add(this.label20, 1, 9);
-            this.hozChasTable.Controls.Add(this.label19, 1, 8);
-            this.hozChasTable.Controls.Add(this.label18, 0, 8);
-            this.hozChasTable.Controls.Add(this.label17, 1, 7);
-            this.hozChasTable.Controls.Add(this.label16, 0, 7);
-            this.hozChasTable.Controls.Add(this.label15, 1, 6);
-            this.hozChasTable.Controls.Add(this.label14, 0, 6);
-            this.hozChasTable.Controls.Add(this.label13, 1, 5);
-            this.hozChasTable.Controls.Add(this.label12, 0, 5);
-            this.hozChasTable.Controls.Add(this.label11, 1, 4);
-            this.hozChasTable.Controls.Add(this.label10, 0, 4);
-            this.hozChasTable.Controls.Add(this.label9, 1, 3);
-            this.hozChasTable.Controls.Add(this.label8, 0, 3);
-            this.hozChasTable.Controls.Add(this.label7, 1, 2);
-            this.hozChasTable.Controls.Add(this.label6, 0, 2);
-            this.hozChasTable.Controls.Add(this.label5, 1, 1);
-            this.hozChasTable.Controls.Add(this.label4, 0, 1);
-            this.hozChasTable.Controls.Add(this.label2, 1, 0);
-            this.hozChasTable.Controls.Add(this.label3, 0, 9);
-            this.hozChasTable.Controls.Add(this.label1, 0, 0);
-            this.hozChasTable.Location = new System.Drawing.Point(17, 45);
-            this.hozChasTable.Name = "hozChasTable";
-            this.hozChasTable.RowCount = 13;
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.hozChasTable.Size = new System.Drawing.Size(106, 230);
-            this.hozChasTable.TabIndex = 0;
-            this.hozChasTable.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(50, 279);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(35, 20);
-            this.label26.TabIndex = 25;
-            this.label26.Text = "label26";
-            // 
-            // label25
-            // 
-            this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(6, 279);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(35, 20);
-            this.label25.TabIndex = 24;
-            this.label25.Text = "label25";
-            // 
-            // label24
-            // 
-            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(50, 256);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(35, 20);
-            this.label24.TabIndex = 23;
-            this.label24.Text = "label24";
-            // 
-            // label23
-            // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(6, 256);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(35, 20);
-            this.label23.TabIndex = 22;
-            this.label23.Text = "label23";
-            // 
-            // label22
-            // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(50, 233);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(35, 20);
-            this.label22.TabIndex = 21;
-            this.label22.Text = "label22";
-            // 
-            // label21
-            // 
-            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(6, 233);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(35, 20);
-            this.label21.TabIndex = 20;
-            this.label21.Text = "label21";
-            // 
-            // label20
-            // 
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(50, 210);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 20);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "label20";
-            // 
-            // label19
-            // 
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Location = new System.Drawing.Point(50, 187);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 20);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "label19";
-            // 
-            // label18
-            // 
-            this.label18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label18.Location = new System.Drawing.Point(6, 187);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 20);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "label18";
-            // 
-            // label17
-            // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Location = new System.Drawing.Point(50, 164);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 20);
-            this.label17.TabIndex = 16;
-            this.label17.Text = "label17";
-            // 
-            // label16
-            // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Location = new System.Drawing.Point(6, 164);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 20);
-            this.label16.TabIndex = 15;
-            this.label16.Text = "label16";
-            // 
-            // label15
-            // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Location = new System.Drawing.Point(50, 141);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 20);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "label15";
-            // 
-            // label14
-            // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label14.Location = new System.Drawing.Point(6, 141);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 20);
-            this.label14.TabIndex = 13;
-            this.label14.Text = "label14";
-            // 
-            // label13
-            // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label13.Location = new System.Drawing.Point(50, 118);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 20);
-            this.label13.TabIndex = 12;
-            this.label13.Text = "label13";
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label12.Location = new System.Drawing.Point(6, 118);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(35, 20);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "label12";
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Location = new System.Drawing.Point(50, 95);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(35, 20);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "label11";
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Location = new System.Drawing.Point(6, 95);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(35, 20);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "label10";
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Location = new System.Drawing.Point(50, 72);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(35, 20);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "label9";
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Location = new System.Drawing.Point(6, 72);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 20);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "label8";
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Location = new System.Drawing.Point(50, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 20);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "label7";
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Location = new System.Drawing.Point(6, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "label6";
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(50, 26);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 20);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "label5";
-            // 
-            // label4
-            // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(6, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
-            // 
-            // label2
-            // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(50, 3);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 210);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(6, 3);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
-            // 
-            // managementPanel
-            // 
-            this.managementPanel.BackColor = System.Drawing.Color.Aqua;
-            this.managementPanel.Location = new System.Drawing.Point(747, 254);
-            this.managementPanel.Name = "managementPanel";
-            this.managementPanel.Size = new System.Drawing.Size(53, 40);
-            this.managementPanel.TabIndex = 0;
-            // 
-            // exitPanel
-            // 
-            this.exitPanel.BackColor = System.Drawing.Color.Silver;
-            this.exitPanel.Location = new System.Drawing.Point(747, 309);
-            this.exitPanel.Name = "exitPanel";
-            this.exitPanel.Size = new System.Drawing.Size(53, 38);
-            this.exitPanel.TabIndex = 0;
-            // 
-            // ratingPanel
-            // 
-            this.ratingPanel.BackColor = System.Drawing.Color.Blue;
-            this.ratingPanel.Location = new System.Drawing.Point(756, 199);
-            this.ratingPanel.Name = "ratingPanel";
-            this.ratingPanel.Size = new System.Drawing.Size(43, 49);
-            this.ratingPanel.TabIndex = 5;
-            // 
-            // selectPhoto
-            // 
-            this.selectPhoto.FileName = "photo";
-            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(106F, 106F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(784, 409);
-            this.Controls.Add(this.progressPanel);
-            this.Controls.Add(this.exitPanel);
             this.Controls.Add(this.managementPanel);
             this.Controls.Add(this.ratingPanel);
-            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.profilePanel);
-            this.Controls.Add(this.upPanel);
+            this.Controls.Add(this.mainPanel);
+            this.Controls.Add(this.progressPanel);
             this.Controls.Add(this.leftPanel);
+            this.MaximumSize = new System.Drawing.Size(800, 450);
             this.MinimumSize = new System.Drawing.Size(800, 450);
             this.Name = "HomeForm";
             this.Text = "HomeForm";
@@ -1239,23 +1513,31 @@
             ((System.ComponentModel.ISupportInitialize)(this.ratingBox)).EndInit();
             this.subMenu4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.managementBox)).EndInit();
-            this.subMenu5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.exitBox)).EndInit();
-            this.upPanel.ResumeLayout(false);
-            this.upPanel.PerformLayout();
+            this.ratingPanel.ResumeLayout(false);
+            this.ratingPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ratingTable)).EndInit();
             this.mainPanel.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.mainPanel.PerformLayout();
+            this.authorizationPanel.ResumeLayout(false);
+            this.authorizationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.profilePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.photoStud)).EndInit();
             this.progressPanel.ResumeLayout(false);
+            this.progressPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allProgressTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.KPDTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.StudKPDTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stipendiaTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dopScoresTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hozChasTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.сultSportVolontTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.olympСonfTable)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.KPDTable.ResumeLayout(false);
-            this.KPDTable.PerformLayout();
-            this.hozChasTable.ResumeLayout(false);
-            this.hozChasTable.PerformLayout();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.allProgress)).EndInit();
+            this.profilePanel.ResumeLayout(false);
+            this.profilePanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.photoStud)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1266,90 +1548,31 @@
         private System.Windows.Forms.Panel subMenu2;
         private System.Windows.Forms.PictureBox progressBox;
         private System.Windows.Forms.PictureBox homeBox;
-        private System.Windows.Forms.Button registerButton;
-        private System.Windows.Forms.Panel upPanel;
         private System.Windows.Forms.Panel subMenu0;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Panel subMenu3;
         private System.Windows.Forms.PictureBox ratingBox;
         private System.Windows.Forms.Panel subMenu4;
         private System.Windows.Forms.PictureBox managementBox;
-        private System.Windows.Forms.Panel subMenu5;
-        private System.Windows.Forms.PictureBox exitBox;
         private System.Windows.Forms.PictureBox profileBox;
         private System.Windows.Forms.Panel profilePanel;
         private System.Windows.Forms.Panel progressPanel;
         private System.Windows.Forms.Panel managementPanel;
-        private System.Windows.Forms.Panel exitPanel;
         private System.Windows.Forms.Panel ratingPanel;
         private System.Windows.Forms.PictureBox photoStud;
         private System.Windows.Forms.Label fullNameStud;
         private System.Windows.Forms.Label changePhoto;
-        private System.Windows.Forms.Label facultyStud;
+        private System.Windows.Forms.Label faculty;
         private System.Windows.Forms.Label positionStud;
         private System.Windows.Forms.Label numberRoom;
         private System.Windows.Forms.Label numberTicketStud;
         private System.Windows.Forms.Label courseStud;
         private System.Windows.Forms.Label groupStud;
         private System.Windows.Forms.OpenFileDialog selectPhoto;
-        private System.Windows.Forms.TableLayoutPanel hozChasTable;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label KPD;
         private System.Windows.Forms.Label HozChas;
-        private System.Windows.Forms.TableLayoutPanel KPDTable;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label52;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel authorizationPanel;
         private System.Windows.Forms.Label autLabel;
         private System.Windows.Forms.TextBox passField;
         private System.Windows.Forms.TextBox logField;
@@ -1357,5 +1580,61 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label facultyStud;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Button exitBotton;
+        private System.Windows.Forms.Label dop;
+        private System.Windows.Forms.Label cultSportVolont;
+        private System.Windows.Forms.Label olympKonfL;
+        private System.Windows.Forms.Label MyKPD;
+        private System.Windows.Forms.Label stipendia;
+        private System.Windows.Forms.DataGridView olympСonfTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn olympKonf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelOlympKonf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn resultOlympKonf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoresOlympKonf;
+        private System.Windows.Forms.DataGridView сultSportVolontTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameCultSportVolont;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelCultSportVolont;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreCultSportVolont;
+        private System.Windows.Forms.DataGridView hozChasTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameHozChas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateHozChas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreHozChas;
+        private System.Windows.Forms.DataGridView dopScoresTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sanKom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn starostaScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn roomScore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studSovet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn learning;
+        private System.Windows.Forms.DataGridView stipendiaTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameStipendia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn levelStipendia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn scoreStipendia;
+        private System.Windows.Forms.DataGridView StudKPDTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kindKPD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateKPD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusKPD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shtraphKPD;
+        private System.Windows.Forms.PictureBox allProgress;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataGridView KPDTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberKPD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridView allProgressTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn kindProgress;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberScores;
+        private System.Windows.Forms.Label allScoresLabel;
+        private System.Windows.Forms.Label nameApplication;
+        private System.Windows.Forms.DataGridView ratingTable;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberStud;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameStudRating;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberScoresStud;
+        private System.Windows.Forms.Label label1;
     }
 }
