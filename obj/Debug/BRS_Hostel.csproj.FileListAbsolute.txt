@@ -7,4 +7,3 @@ E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel
 E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.exe
 E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.pdb
 E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.HomeForm.resources
-E:\универ\5 семестр\БД\BRS_Hostel\BRS_Hostel\obj\Debug\BRS_Hostel.RegisterForm.resources
