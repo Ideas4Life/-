@@ -61,14 +61,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="managementHozChas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manegementComendant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="managementSanKom.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="profileStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="progressStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="retingStud.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +126,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\error.png" />
     <Content Include="images\exit.png" />
     <Content Include="images\fonHostel.jpg" />
     <Content Include="images\home.png" />
