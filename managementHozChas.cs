@@ -63,8 +63,6 @@ namespace BRS_Hostel
 
 
             commonDateHozChas();
-            //personalDateHozChas();
-            //changeDateHozChasF();
         }
 
         private void commonDateHozChas()
@@ -130,7 +128,7 @@ namespace BRS_Hostel
 
             int sz = personalHozChasTable.ColumnHeadersHeight + personalHozChasTable.RowTemplate.Height * personalHozChasTable.Rows.Count
                 - Convert.ToInt32(commonHozChasTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 190)
                 personalHozChasTable.Height = sz;
             else personalHozChasTable.Height = 190;
         }

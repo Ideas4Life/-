@@ -2,8 +2,6 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.OleDb;
-using System.Collections.Generic;
-using System.Text.RegularExpressions;
 
 namespace BRS_Hostel
 {
@@ -133,27 +131,28 @@ namespace BRS_Hostel
                         }
                     case "КультОрг":
                         {
-                            //Load +=loadDateCultOrg;
+                            eventLoadD += loadDateCultOrg;
+                            eventCloseD += closeDateCultOrg;
                             break;
                         }
                     case "Ответственный за научную деятельность":
                         {
-                            //Load +=
+                            //eventLoadD +=
                             break;
                         }
                     case "Староста этажа":
                         {
-                            //Load +=
+                            //eventLoadD +=
                             break;
                         }
                     case "Председатель КПД":
                         {
-                            //Load +=
+                            //eventLoadD +=
                             break;
                         }
                     case "Председатель СС":
                         {
-                            //Load +=
+                            //eventLoadD +=
                             break;
                         }
                     default: break;    
@@ -274,8 +273,6 @@ namespace BRS_Hostel
                 managementPanel.Show();
                 managementPanel.Dock = DockStyle.Fill;
             }
-        }
-
-
+        }        
     }
 }
