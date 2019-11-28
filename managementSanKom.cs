@@ -48,11 +48,11 @@ namespace BRS_Hostel
             lookScoresSanKom.Show();
             addNewDate.Hide();
 
-            lookDateSanKom();
+            commonDateSanKom();
             changeDateSanKom();
         }
 
-        private void lookDateSanKom()
+        private void commonDateSanKom()
         {
             // заполнение таблицы добавления баллов
             string querry = "Select Distinct [a.fullName], a.[numberRoom], b.[sanKom] From [Students] a, [ScoresStud] b Where a.[idStud]=b.[idStud]";
@@ -159,11 +159,13 @@ namespace BRS_Hostel
             addScoresSanKom.Rows.Clear();
 
             changeDateSanKom();
+            eventChangeDateTable();
         }
 
         private void closeDateSanKom()
         {
-
+            panelSanKom.Hide();
+            eventChangeDateTable -= commonDateSanKom;
         }
     }
 }

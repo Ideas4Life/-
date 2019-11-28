@@ -144,6 +144,7 @@ namespace BRS_Hostel
             personalCultOrgTable.Rows.Clear();
 
             personalDateCultOrg(idCO);
+            eventChangeDateTable();
         }
 
         private void findCultOrgButton_Click(object sender, EventArgs e)
@@ -167,7 +168,8 @@ namespace BRS_Hostel
 
         private void closeDateCultOrg()
         {
-
+            panelCultOrg.Hide();
+            eventChangeDateTable -= commonDateCultOrg;
         }
     }
 }

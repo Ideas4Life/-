@@ -171,6 +171,7 @@ namespace BRS_Hostel
             addScoresSanKom.Rows.Clear();
 
             personalDateHozChas(idHZ);
+            eventChangeDateTable();
         }
 
         private void findStudHozchas_Click(object sender, EventArgs e)
@@ -194,7 +195,8 @@ namespace BRS_Hostel
 
         private void closeDateHozChas()
         {
-
+            panelHozChas.Hide();
+            eventChangeDateTable -= commonDateHozChas;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace BRS_Hostel
         delegate void LoadDate();
         event LoadDate eventLoadD;
         event LoadDate eventCloseD;
+        event LoadDate eventChangeDateTable;
 
         /*
             Конструктор формы
@@ -73,6 +74,17 @@ namespace BRS_Hostel
             eventLoadD += loadDataStudKPD;
             eventLoadD += loadDataRating;
             eventLoadD += loadDataAllProgress;
+
+            //Добавление обработчиков события для обновления данных в таблицах
+            eventChangeDateTable += loadDataProfileStud;
+            eventChangeDateTable += loadDataOlympKonf;
+            eventChangeDateTable += loadDataCultSportVolont;
+            eventChangeDateTable += loadDataHozChas;
+            eventChangeDateTable += loadDataDopScore;
+            eventChangeDateTable += loadDataStipendia;
+            eventChangeDateTable += loadDataStudKPD;
+            eventChangeDateTable += loadDataRating;
+            eventChangeDateTable += loadDataAllProgress;
         }
         
         //Авторизация пользователей
@@ -115,29 +127,36 @@ namespace BRS_Hostel
                         {
                             eventLoadD += loadDataComendant;
                             eventCloseD += closeDateComendant;
+                            eventChangeDateTable += loadlistStudsComend;
+                            eventChangeDateTable += dataLoadStudSovetCom;
                             break;
                         }
                     case "СанКом":
                         {
                             eventLoadD += loadDateSanKom;
                             eventCloseD += closeDateSanKom;
+                            eventChangeDateTable += commonDateSanKom;
                             break;
                         }
                     case "Отв. хоз часы":
                         {
                             eventLoadD +=loadDateHozChas;
                             eventCloseD += closeDateHozChas;
+                            eventChangeDateTable += commonDateHozChas;
                             break;
                         }
                     case "КультОрг":
                         {
                             eventLoadD += loadDateCultOrg;
                             eventCloseD += closeDateCultOrg;
+                            eventChangeDateTable += commonDateCultOrg;
                             break;
                         }
-                    case "Ответственный за научную деятельность":
+                    case "Отв. науч деят":
                         {
-                            //eventLoadD +=
+                            eventLoadD +=loadDateScienceOrg;
+                            eventLoadD += closeDateScienceOrg;
+                            eventChangeDateTable += commonDateScienceOrg;
                             break;
                         }
                     case "Староста этажа":
@@ -186,11 +205,14 @@ namespace BRS_Hostel
             exitBotton.Visible = false;
             nameApplication.Visible = false;
 
+            eventCloseD();
+            /*
             panelSanKom.Visible = false; 
             panelComendant.Visible = false;
 
             panelSanKom.Dock = DockStyle.None;
             panelComendant.Dock = DockStyle.None;
+            */
         }
 
         //Закрытие базы данных при закрытие формы
@@ -273,6 +295,8 @@ namespace BRS_Hostel
                 managementPanel.Show();
                 managementPanel.Dock = DockStyle.Fill;
             }
-        }        
+        }
+
+
     }
 }

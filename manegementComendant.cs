@@ -88,7 +88,7 @@ namespace BRS_Hostel
         {
 
             listStudComendTable.Rows.Clear();
-            string query = "SELECT [fullName], [numberRoom], [numberGroup], [course], [position] FROM [Students] ORDER BY [fullName]";
+            string query = "SELECT [fullName], [numberRoom], [numberGroup], [course], [position] FROM [Students] Where [idStud]>0 ORDER BY [fullName] ";
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
             OleDbDataReader reader = command.ExecuteReader();
@@ -474,6 +474,7 @@ namespace BRS_Hostel
             {
                 errorChangePosotion.Text = "Ошибка";
             }
+            eventChangeDateTable();
         }
 
 
@@ -600,8 +601,42 @@ namespace BRS_Hostel
                 {
 
                 }
-            }
 
+                string query2 = "INSERT into [ScoresStud] VALUES (@id, @san, @star, @remont, @studSov," +
+                    "@markSt, @olymp, @sport, @hoz, @stip, @kpd, @all)";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("id", OleDbType.Integer).Value = imax;
+                command.Parameters.Add("san", OleDbType.Double, 15).Value = 0;
+                command.Parameters.Add("star", OleDbType.Integer, 15).Value = 0;
+                command.Parameters.Add("remont", OleDbType.Integer, 10).Value = 0;
+                command.Parameters.Add("studSov", OleDbType.Integer, 15).Value = 0;
+                command.Parameters.Add("markSt", OleDbType.Double, 10).Value = 0;
+                command.Parameters.Add("olymp", OleDbType.Integer, 15).Value = 0;
+                command.Parameters.Add("sport", OleDbType.Integer, 10).Value = 0;
+                command.Parameters.Add("hos", OleDbType.Integer, 15).Value = 0;
+                command.Parameters.Add("stip", OleDbType.Integer, 10).Value = 0;
+                command.Parameters.Add("kpd", OleDbType.Integer, 15).Value = 0;
+                command.Parameters.Add("all", OleDbType.Integer, 10).Value = 0;
+                
+                try
+                {
+                    if (command.ExecuteNonQuery() == 1)
+                    {
+                        nameStudAddCom.Text = "";
+                        numberTicketCom.Text = "";
+                        instituteCom.Text = "";
+                        courseCom.Text = "";
+                        dateBornCom.Text = "";
+                        numberRoomCom.Text = "";
+                        numberGroupCom.Text = "";
+                    }
+                }
+                catch
+                {
+
+                }
+            }
+            eventChangeDateTable();
         }
 
         private void cancelCom_Click(object sender, EventArgs e)
@@ -710,7 +745,9 @@ namespace BRS_Hostel
         
         private void closeDateComendant()
         {
-
+            panelComendant.Hide();
+            eventChangeDateTable -= commonDateCultOrg;
+            eventChangeDateTable -= dataLoadStudSovetCom;
         }
     }
 }
