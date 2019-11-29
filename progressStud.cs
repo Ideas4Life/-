@@ -15,7 +15,6 @@ namespace BRS_Hostel
 
         private void allProgress_Click(object sender, EventArgs e)
         {
-            allScoresLabel.Visible = true;
             allProgressTable.Visible = true;
             hozChasTable.Visible = false;
             сultSportVolontTable.Visible = false;
@@ -36,7 +35,6 @@ namespace BRS_Hostel
             StudKPDTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void KPD_Click(object sender, EventArgs e)
@@ -49,7 +47,6 @@ namespace BRS_Hostel
             stipendiaTable.Visible = false;
             StudKPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void cultSportVolont_Click(object sender, EventArgs e)
@@ -62,7 +59,6 @@ namespace BRS_Hostel
             StudKPDTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void stipendia_Click(object sender, EventArgs e)
@@ -75,7 +71,6 @@ namespace BRS_Hostel
             StudKPDTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void dop_Click(object sender, EventArgs e)
@@ -88,7 +83,6 @@ namespace BRS_Hostel
             StudKPDTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void MyKPD_Click(object sender, EventArgs e)
@@ -101,7 +95,6 @@ namespace BRS_Hostel
             stipendiaTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         private void olympKonf_Click(object sender, EventArgs e)
@@ -114,7 +107,6 @@ namespace BRS_Hostel
             StudKPDTable.Visible = false;
             KPDTable.Visible = false;
             allProgressTable.Visible = false;
-            allScoresLabel.Visible = false;
         }
 
         /*

@@ -86,7 +86,7 @@ namespace BRS_Hostel
         private void personalDateCultOrg(int idS)
         {
             idCO = idS;
-            personalHozChasTable.Rows.Clear();
+            personalCultOrgTable.Rows.Clear();
             string querry = "Select [nameCultSportVolont], [levelCultSportVolont], [scoreCultSportVolont]  From [CultSportVolont] " +
                 "Where [idStud]=@id";
             OleDbCommand command = new OleDbCommand(querry, myConnection);

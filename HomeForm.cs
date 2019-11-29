@@ -17,6 +17,9 @@ namespace BRS_Hostel
         event LoadDate eventLoadD;
         event LoadDate eventCloseD;
         event LoadDate eventChangeDateTable;
+        bool bProf = false;
+        bool bProgress = false;
+        bool bManag = false;
 
         /*
             Конструктор формы
@@ -109,7 +112,7 @@ namespace BRS_Hostel
                         StId = reader[0].ToString();
                         position = reader[1].ToString();
                     }
-
+                    bProf = true;
                     login = true;
                     authorizationPanel.Visible = false;
                     nameApplication.Visible = true;
@@ -123,12 +126,18 @@ namespace BRS_Hostel
 
                 switch (position)
                 {
+                    case "Пользователь":
+                        {
+                            bProgress = true;
+                            break;
+                        }
                     case "Комендант":
                         {
                             eventLoadD += loadDataComendant;
                             eventCloseD += closeDateComendant;
                             eventChangeDateTable += loadlistStudsComend;
                             eventChangeDateTable += dataLoadStudSovetCom;
+                            bManag = true;
                             break;
                         }
                     case "СанКом":
@@ -136,6 +145,8 @@ namespace BRS_Hostel
                             eventLoadD += loadDateSanKom;
                             eventCloseD += closeDateSanKom;
                             eventChangeDateTable += commonDateSanKom;
+                            bProgress= true;
+                            bManag = true;
                             break;
                         }
                     case "Отв. хоз часы":
@@ -143,6 +154,8 @@ namespace BRS_Hostel
                             eventLoadD +=loadDateHozChas;
                             eventCloseD += closeDateHozChas;
                             eventChangeDateTable += commonDateHozChas;
+                            bProgress = true;
+                            bManag = true;
                             break;
                         }
                     case "КультОрг":
@@ -150,23 +163,31 @@ namespace BRS_Hostel
                             eventLoadD += loadDateCultOrg;
                             eventCloseD += closeDateCultOrg;
                             eventChangeDateTable += commonDateCultOrg;
+                            bProgress = true;
+                            bManag = true;
                             break;
                         }
                     case "Отв. науч деят":
                         {
                             eventLoadD +=loadDateScienceOrg;
-                            eventLoadD += closeDateScienceOrg;
+                            eventCloseD += closeDateScienceOrg;
                             eventChangeDateTable += commonDateScienceOrg;
+                            bProgress = true;
+                            bManag = true;
                             break;
                         }
                     case "Староста этажа":
                         {
-                            //eventLoadD +=
+
                             break;
                         }
-                    case "Председатель КПД":
+                    case "Председ. КПД":
                         {
-                            //eventLoadD +=
+                            bProgress = true;
+                            bManag = true;
+                            eventLoadD += loadDatePredsedKPD;
+                            eventCloseD += closeDatePredsedKPD;
+                            eventChangeDateTable += commonDatePredsedKPD;
                             break;
                         }
                     case "Председатель СС":
@@ -204,15 +225,10 @@ namespace BRS_Hostel
             authorizationPanel.Visible = true;
             exitBotton.Visible = false;
             nameApplication.Visible = false;
-
+            bProf = false;
+            bProgress = false;
+            bManag = false;
             eventCloseD();
-            /*
-            panelSanKom.Visible = false; 
-            panelComendant.Visible = false;
-
-            panelSanKom.Dock = DockStyle.None;
-            panelComendant.Dock = DockStyle.None;
-            */
         }
 
         //Закрытие базы данных при закрытие формы
@@ -239,7 +255,7 @@ namespace BRS_Hostel
 
         private void profileBox_Click(object sender, EventArgs e)
         {
-            if (login)
+            if (login && bProf)
             {
                 if (Convert.ToInt32(StId) > 0)
                     loadDataProfileStud();
@@ -256,7 +272,7 @@ namespace BRS_Hostel
 
         private void progressBox_Click(object sender, EventArgs e)
         {
-            if (login)
+            if (login && bProgress)
             {
                 mainPanel.Hide();
                 profilePanel.Hide();
@@ -286,7 +302,7 @@ namespace BRS_Hostel
 
         private void managementBox_Click(object sender, EventArgs e)
         {
-            if (login && position != "Пользователь")
+            if (login && bManag)
             {
                 mainPanel.Hide();
                 profilePanel.Hide();
