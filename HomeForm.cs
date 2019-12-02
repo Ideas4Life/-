@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.OleDb;
+using System.Collections.Generic;
 
 namespace BRS_Hostel
 {
@@ -79,6 +80,7 @@ namespace BRS_Hostel
             eventLoadD += loadDataAllProgress;
 
             //Добавление обработчиков события для обновления данных в таблицах
+            eventChangeDateTable += changeSumScoreStud;
             eventChangeDateTable += loadDataProfileStud;
             eventChangeDateTable += loadDataOlympKonf;
             eventChangeDateTable += loadDataCultSportVolont;
@@ -178,7 +180,7 @@ namespace BRS_Hostel
                         }
                     case "Староста этажа":
                         {
-
+                            bProgress = true;
                             break;
                         }
                     case "Председ. КПД":
@@ -192,7 +194,11 @@ namespace BRS_Hostel
                         }
                     case "Председатель СС":
                         {
-                            //eventLoadD +=
+                            bProgress = true;
+                            bManag = true;
+                            eventLoadD += loadDatePredsedSS;
+                            eventCloseD += closeDatePredsedSS;
+                            eventChangeDateTable += commonDataPredsedSS;
                             break;
                         }
                     default: break;    
@@ -228,7 +234,7 @@ namespace BRS_Hostel
             bProf = false;
             bProgress = false;
             bManag = false;
-            eventCloseD();
+            eventCloseD?.Invoke();
         }
 
         //Закрытие базы данных при закрытие формы
@@ -239,8 +245,219 @@ namespace BRS_Hostel
             myConnection.Close();
         }
 
-        //обработка клика по икенке homeBox
+        //подсчёт суммарных баллов в бд
+        private void changeSumScoreStud()
+        {
+            changeSumOlympScore();
+            changeSumCultSportVolont();
+            changeSumHozChas();
+            changeSumStipendia();
+            changeSumKPD();
+            changeSumAll();
+        }
 
+        private void changeSumOlympScore()
+        {
+            string query = "SELECT Distinct [idStud] FROM [OlympConf] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT Sum([scoreOlympConf]) FROM [OlympConf] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                int sum = int.Parse(command.ExecuteScalar().ToString());
+
+                string query2 = "UPDATE [ScoresStud] SET [allOlympConf]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Integer).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+
+        private void changeSumCultSportVolont()
+        {
+            string query = "SELECT Distinct [idStud] FROM [CultSportVolont] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT Sum([scoreCultSportVolont]) FROM [CultSportVolont] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                int sum = int.Parse(command.ExecuteScalar().ToString());
+
+                string query2 = "UPDATE [ScoresStud] SET [allSportCultVolont]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Integer).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+        private void changeSumHozChas()
+        {
+            string query = "SELECT Distinct [idStud] FROM [HozChas] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT Sum([scores]) FROM [HozChas] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                int sum = int.Parse(command.ExecuteScalar().ToString());
+
+                string query2 = "UPDATE [ScoresStud] SET [allHozChas]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Integer).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+
+        private void changeSumStipendia()
+        {
+            string query = "SELECT Distinct [idStud] FROM [Stipendia] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT Sum([scoreStipendia]) FROM [Stipendia] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                int sum = int.Parse(command.ExecuteScalar().ToString());
+
+                string query2 = "UPDATE [ScoresStud] SET [allNameStipendia]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Integer).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+        private void changeSumKPD()
+        {
+            string query = "SELECT Distinct [idStud] FROM [StudKPD] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT Sum([scoreKPD]) FROM [StudKPD] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                int sum = int.Parse(command.ExecuteScalar().ToString());
+
+                string query2 = "UPDATE [ScoresStud] SET [allScoreKPD]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Integer).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+
+        private void changeSumAll()
+        {
+            string query = "SELECT Distinct [idStud] FROM [ScoresStud] WHERE  [idStud]>0";
+            OleDbCommand command = new OleDbCommand(query, myConnection);
+            OleDbDataReader reader = command.ExecuteReader();
+
+            List<int> data = new List<int>();
+
+            while (reader.Read())
+            {
+                data.Add(int.Parse(reader[0].ToString()));
+            }
+            reader.Close();
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                string query1 = "SELECT * FROM [ScoresStud] WHERE [idStud]=@id";
+                command = new OleDbCommand(query1, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                reader = command.ExecuteReader();
+
+                double sum=0;
+
+                while (reader.Read())
+                {
+                    sum = 0;
+                    double k = double.Parse(reader[1].ToString());
+                    if (k >= 2)
+                        sum = (k - 5) * 5;
+                    else sum = 0;
+                    sum += double.Parse(reader[2].ToString());
+                    sum += double.Parse(reader[3].ToString());
+                    sum += double.Parse(reader[4].ToString());
+                    double p = double.Parse(reader[5].ToString());
+                    sum += p*20;
+                    sum += double.Parse(reader[6].ToString());
+                    sum += double.Parse(reader[7].ToString());
+                    sum += double.Parse(reader[8].ToString());
+                    sum += double.Parse(reader[9].ToString());
+                    sum -= double.Parse(reader[10].ToString());
+                }
+                reader.Close();
+
+
+                string query2 = "UPDATE [ScoresStud] SET [allScoresStud]=@sum Where [idStud]=@id";
+                command = new OleDbCommand(query2, myConnection);
+                command.Parameters.Add("sum", OleDbType.Double).Value = sum;
+                command.Parameters.Add("id", OleDbType.VarChar).Value = data[i];
+                command.ExecuteNonQuery();
+            }
+
+        }
+
+        //обработка клика по икенке homeBox
         private void homeBox_Click(object sender, EventArgs e)
         {
             mainPanel.Show();

@@ -14,7 +14,7 @@ namespace BRS_Hostel
         private void loadDataRating()
         {
             ratingTable.Rows.Clear();
-            string query = "SELECT [a.fullName], [b.allHozChas] FROM Students a, ScoresStud b WHERE b.idStud=a.idStud ORDER BY b.allHozChas DESC";
+            string query = "SELECT [a.fullName], [b.allScoresStud] FROM Students a, ScoresStud b WHERE b.idStud=a.idStud ORDER BY b.allScoresStud DESC";
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
             OleDbDataReader reader = command.ExecuteReader();

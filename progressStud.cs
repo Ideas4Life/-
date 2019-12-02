@@ -139,8 +139,10 @@ namespace BRS_Hostel
                 data[data.Count - 1][3] = reader[3].ToString();
             }
             reader.Close();
+
             foreach (string[] s in data)
                 olympСonfTable.Rows.Add(s);
+
             int sz = olympСonfTable.ColumnHeadersHeight + olympСonfTable.RowTemplate.Height * olympСonfTable.Rows.Count - Convert.ToInt32(olympСonfTable.Rows.Count * 2);
             if (sz <= 250)
                 olympСonfTable.Height = sz;
@@ -152,6 +154,7 @@ namespace BRS_Hostel
         private void loadDataCultSportVolont()
         {
             сultSportVolontTable.Rows.Clear();
+
             string query = "SELECT [nameCultSportVolont], [levelCultSportVolont], [scoreCultSportVolont]" +
                 " FROM [CultSportVolont] WHERE idStud=@uId ";
 
@@ -168,11 +171,12 @@ namespace BRS_Hostel
                 data[data.Count - 1][0] = reader[0].ToString();
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
-                //scoresStud[1] += Convert.ToDouble(reader[2].ToString());
             }
             reader.Close();
+
             foreach (string[] s in data)
                 сultSportVolontTable.Rows.Add(s);
+
             int sz = сultSportVolontTable.ColumnHeadersHeight + сultSportVolontTable.RowTemplate.Height * сultSportVolontTable.Rows.Count - Convert.ToInt32(сultSportVolontTable.Rows.Count * 2);
             if (sz <= 250)
                 сultSportVolontTable.Height = sz;
@@ -184,7 +188,7 @@ namespace BRS_Hostel
         private void loadDataHozChas()
         {
             hozChasTable.Rows.Clear();
-            //scoresStud[2] = 0;
+
             string query = "SELECT [names], [scores], [date]" +
                 " FROM [HozChas] WHERE idStud=@uId ";
             OleDbCommand command = new OleDbCommand(query, myConnection);
@@ -306,7 +310,6 @@ namespace BRS_Hostel
                 data[data.Count - 1][1] = reader[1].ToString();
                 data[data.Count - 1][2] = reader[2].ToString();
                 data[data.Count - 1][3] = reader[3].ToString();
-                //scoresStud[5] -= Convert.ToDouble(reader[3].ToString());
             }
             reader.Close();
 
@@ -370,7 +373,11 @@ namespace BRS_Hostel
                 allProgressTable.Rows.Add(new string[2] { "Хоз часы", reader[8].ToString() });
                 allProgressTable.Rows.Add(new string[2] { "Именные стипендии", reader[9].ToString() });
                 allProgressTable.Rows.Add(new string[2] { "Штрафные баллы за КПД", reader[10].ToString()});
-                double dopSc = (double.Parse(reader[1].ToString())-5)*5 + double.Parse(reader[2].ToString()) +
+                double dopSc = double.Parse(reader[1].ToString());
+                if (dopSc < 2.0)
+                    dopSc = 0.0;
+                else dopSc = (dopSc - 5) * 5;
+                dopSc +=double.Parse(reader[2].ToString()) +
                     double.Parse(reader[3].ToString()) + double.Parse(reader[4].ToString()) +
                     double.Parse(reader[5].ToString())*20;
                 allProgressTable.Rows.Add(new string[2] { "Дополнительные баллы", dopSc.ToString() });

@@ -184,7 +184,6 @@ namespace BRS_Hostel
             KPDStudComTable.Visible = false;
             allProgressStudComTable.Visible = true;
             allScoresStudCom.Visible = true;
-
         }
 
         //Загрузка данных пользователя для коменданта о его олимпиадах, конференциях из базы данных

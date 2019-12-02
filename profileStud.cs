@@ -35,6 +35,8 @@ namespace BRS_Hostel
                 groupStud.Text = reader[4].ToString();
                 facultyStud.Text = reader[5].ToString();
                 courseStud.Text = reader[6].ToString();
+                DateTime d = DateTime.Parse(reader[7].ToString());
+                dateBornLabel.Text = d.ToString("dd.MM.yyyy");
                 positionStud.Text = reader[8].ToString();
             }
         }
