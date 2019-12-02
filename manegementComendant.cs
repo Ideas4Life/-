@@ -31,11 +31,9 @@ namespace BRS_Hostel
             dataLoadStudSovetCom();
         }
 
-
         /*
             Настройка отображения данных на панели "Управление" коменданта при клике на соответствующие метки
         */
-
 
         private void listStuds_Click(object sender, EventArgs e)
         {
@@ -105,8 +103,10 @@ namespace BRS_Hostel
                 data[data.Count - 1][4] = reader[4].ToString();
             }
             reader.Close();
+
             foreach (string[] s in data)
                 listStudComendTable.Rows.Add(s);
+
             int sz = listStudComendTable.ColumnHeadersHeight + listStudComendTable.RowTemplate.Height * listStudComendTable.Rows.Count - Convert.ToInt32(listStudComendTable.Rows.Count * 2);
             if (sz <= 250)
                 listStudComendTable.Size = new Size(640, sz);
@@ -473,7 +473,7 @@ namespace BRS_Hostel
             {
                 errorChangePosotion.Text = "Ошибка";
             }
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
 
 
@@ -635,7 +635,7 @@ namespace BRS_Hostel
 
                 }
             }
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
 
         private void cancelCom_Click(object sender, EventArgs e)
@@ -745,8 +745,10 @@ namespace BRS_Hostel
         private void closeDateComendant()
         {
             panelComendant.Hide();
-            eventChangeDateTable -= commonDateCultOrg;
-            eventChangeDateTable -= dataLoadStudSovetCom;
+            eventLoadD -= loadDataComendant;
+            eventCloseD -= closeDateComendant;
+            eventChangeDataTable -= loadlistStudsComend;
+            eventChangeDataTable -= dataLoadStudSovetCom;
         }
     }
 }

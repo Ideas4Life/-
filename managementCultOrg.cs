@@ -77,9 +77,9 @@ namespace BRS_Hostel
 
             int sz = commonCultOrgTable.ColumnHeadersHeight + commonCultOrgTable.RowTemplate.Height * commonCultOrgTable.Rows.Count
                 - Convert.ToInt32(commonCultOrgTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= commonCultOrgPanel.Height - 20)
                 commonCultOrgTable.Height = sz;
-            else commonCultOrgTable.Height = 250;
+            else commonCultOrgTable.Height = commonCultOrgPanel.Height-20;
 
         }
         int idCO;
@@ -116,9 +116,9 @@ namespace BRS_Hostel
 
             int sz = personalCultOrgTable.ColumnHeadersHeight + personalCultOrgTable.RowTemplate.Height * personalCultOrgTable.Rows.Count
                 - Convert.ToInt32(personalCultOrgTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalCultOrgPanel.Height - panel5.Height - 20)
                 personalCultOrgTable.Height = sz;
-            else personalCultOrgTable.Height = 190;
+            else personalCultOrgTable.Height = personalCultOrgPanel.Height- panel5.Height-20;
         }
 
         private void saveCultOrgButton_Click(object sender, EventArgs e)
@@ -144,7 +144,7 @@ namespace BRS_Hostel
             personalCultOrgTable.Rows.Clear();
 
             personalDateCultOrg(idCO);
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
 
         private void findCultOrgButton_Click(object sender, EventArgs e)
@@ -169,7 +169,9 @@ namespace BRS_Hostel
         private void closeDateCultOrg()
         {
             panelCultOrg.Hide();
-            eventChangeDateTable -= commonDateCultOrg;
+            eventLoadD -= loadDateCultOrg;
+            eventCloseD -= closeDateCultOrg;
+            eventChangeDataTable -= commonDateCultOrg;
         }
     }
 }

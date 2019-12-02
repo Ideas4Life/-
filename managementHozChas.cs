@@ -38,8 +38,6 @@ namespace BRS_Hostel
             personalHozChasTable.Hide();
             addDateHozChas.Hide();
 
-
-
             //инициализация панели меню
             menuPanelHozChas.Location = new Point(3, 3);
             menuPanelHozChas.Size = new Size(660, 45);
@@ -59,8 +57,6 @@ namespace BRS_Hostel
             //инициализация таблицы для просмотра баллов выбранного студентов
             personalHozChasTable.Location = new Point(50, 55);
             personalHozChasTable.Size = new Size(560, 73);
-
-
 
             commonDateHozChas();
         }
@@ -89,9 +85,9 @@ namespace BRS_Hostel
 
             int sz = commonHozChasTable.ColumnHeadersHeight + commonHozChasTable.RowTemplate.Height * commonHozChasTable.Rows.Count
                 - Convert.ToInt32(commonHozChasTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= commonHozChasPanel.Height - commonHozChasTable.Location.Y - 10)
                 commonHozChasTable.Height = sz;
-            else commonHozChasTable.Height = 250;
+            else commonHozChasTable.Height = commonHozChasPanel.Height- commonHozChasTable.Location.Y-10;
 
         }
         int idHZ;
@@ -128,9 +124,9 @@ namespace BRS_Hostel
 
             int sz = personalHozChasTable.ColumnHeadersHeight + personalHozChasTable.RowTemplate.Height * personalHozChasTable.Rows.Count
                 - Convert.ToInt32(commonHozChasTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalHozChasPanel.Height - personalHozChasTable.Location.Y - 10)
                 personalHozChasTable.Height = sz;
-            else personalHozChasTable.Height = 190;
+            else personalHozChasTable.Height = personalHozChasPanel.Height - personalHozChasTable.Location.Y - 10;
         }
 
         private void saveDateHozChas_Click(object sender, EventArgs e)
@@ -171,7 +167,7 @@ namespace BRS_Hostel
             addScoresSanKom.Rows.Clear();
 
             personalDateHozChas(idHZ);
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
 
         private void findStudHozchas_Click(object sender, EventArgs e)
@@ -196,7 +192,9 @@ namespace BRS_Hostel
         private void closeDateHozChas()
         {
             panelHozChas.Hide();
-            eventChangeDateTable -= commonDateHozChas;
+            eventLoadD -= loadDateHozChas;
+            eventCloseD -= closeDateHozChas;
+            eventChangeDataTable-= commonDateHozChas;
         }
     }
 }

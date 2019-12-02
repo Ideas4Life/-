@@ -113,6 +113,26 @@ namespace BRS_Hostel
             Загрузка данных пользователя о его достижениях
         */
 
+        private void loadDataProgressUser()
+        {
+            KPDTable.Location = сultSportVolontTable.Location = olympСonfTable.Location
+                = hozChasTable.Location = dopScoresTable.Location = stipendiaTable.Location =
+                 StudKPDTable.Location = allProgressTable.Location = new Point(15, 85);
+
+            allProgressTable.Size = KPDTable.Size = сultSportVolontTable.Size = olympСonfTable.Size
+                = hozChasTable.Size = dopScoresTable.Size = stipendiaTable.Size =
+                StudKPDTable.Size = new Size(640, 56);
+
+            allProgressTable.Visible = true;
+            hozChasTable.Visible = false;
+            сultSportVolontTable.Visible = false;
+            olympСonfTable.Visible = false;
+            dopScoresTable.Visible = false;
+            stipendiaTable.Visible = false;
+            StudKPDTable.Visible = false;
+            KPDTable.Visible = false;
+        }
+
         //загрузка данных пользователя о его олимпиадах, конференциях из базы данных
 
         private void loadDataOlympKonf()
@@ -144,9 +164,9 @@ namespace BRS_Hostel
                 olympСonfTable.Rows.Add(s);
 
             int sz = olympСonfTable.ColumnHeadersHeight + olympСonfTable.RowTemplate.Height * olympСonfTable.Rows.Count - Convert.ToInt32(olympСonfTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 olympСonfTable.Height = sz;
-            else olympСonfTable.Height = 250;
+            else olympСonfTable.Height = 270;
         }
 
         //загрузка данных пользователя о его спортивных, культурных, волонтерских мероприятиях из базы данных
@@ -178,9 +198,9 @@ namespace BRS_Hostel
                 сultSportVolontTable.Rows.Add(s);
 
             int sz = сultSportVolontTable.ColumnHeadersHeight + сultSportVolontTable.RowTemplate.Height * сultSportVolontTable.Rows.Count - Convert.ToInt32(сultSportVolontTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 сultSportVolontTable.Height = sz;
-            else сultSportVolontTable.Height = 250;
+            else сultSportVolontTable.Height = 270;
         }
 
         //загрузка данных пользователя и его Хоз часах из базы данных
@@ -211,9 +231,9 @@ namespace BRS_Hostel
                 hozChasTable.Rows.Add(s);
 
             int sz = hozChasTable.ColumnHeadersHeight + hozChasTable.RowTemplate.Height * hozChasTable.Rows.Count - Convert.ToInt32(hozChasTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 hozChasTable.Height = sz;
-            else hozChasTable.Height = 250;
+            else hozChasTable.Height = 270;
         }
 
         //загрузка данных пользователя и его дополнительных баллах из базы данных
@@ -245,9 +265,9 @@ namespace BRS_Hostel
                 dopScoresTable.Rows.Add(s);
 
             int sz = dopScoresTable.ColumnHeadersHeight + dopScoresTable.RowTemplate.Height * dopScoresTable.Rows.Count - Convert.ToInt32(dopScoresTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 dopScoresTable.Height = sz;
-            else dopScoresTable.Height = 250;
+            else dopScoresTable.Height = 270;
         }
 
         //загрузка данных пользователя и его именных стипендяих из базы данных
@@ -278,9 +298,9 @@ namespace BRS_Hostel
                 stipendiaTable.Rows.Add(s);
 
             int sz = stipendiaTable.ColumnHeadersHeight + stipendiaTable.RowTemplate.Height * stipendiaTable.Rows.Count - Convert.ToInt32(stipendiaTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 StudKPDTable.Height = sz;
-            else StudKPDTable.Height = 250;
+            else StudKPDTable.Height = 270;
         }
 
         //загрузка данных пользователя и его нарушениях КПД из базы данных
@@ -317,9 +337,9 @@ namespace BRS_Hostel
                 StudKPDTable.Rows.Add(s);
 
             int sz = StudKPDTable.ColumnHeadersHeight + StudKPDTable.RowTemplate.Height * StudKPDTable.Rows.Count - Convert.ToInt32(StudKPDTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 StudKPDTable.Height = sz;
-            else StudKPDTable.Height = 250;
+            else StudKPDTable.Height = 270;
         }
 
         //загрузка данных КПД из базы данных
@@ -347,9 +367,9 @@ namespace BRS_Hostel
                 KPDTable.Rows.Add(s);
 
             int sz = KPDTable.ColumnHeadersHeight + KPDTable.RowTemplate.Height * KPDTable.Rows.Count - Convert.ToInt32(KPDTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 270)
                 KPDTable.Height = sz;
-            else KPDTable.Height = 250;
+            else KPDTable.Height = 270;
         }
 
         //загрузка данных пользователя и его общих сводных данных из базы данных
@@ -390,9 +410,9 @@ namespace BRS_Hostel
              
             int sz = allProgressTable.ColumnHeadersHeight +
                 allProgressTable.RowTemplate.Height * allProgressTable.Rows.Count - Convert.ToInt32(allProgressTable.Rows.Count * 2);
-            if (sz <= 250)
-                allProgressTable.Height = sz;
-            else allProgressTable.Height = 250;
+            if (sz <= 270)
+              allProgressTable.Height = sz;
+            else allProgressTable.Height = 270;
         }
     }
 }

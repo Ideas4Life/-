@@ -13,7 +13,9 @@ namespace BRS_Hostel
 
         private void loadDataRating()
         {
+            ratingTable.Show();
             ratingTable.Rows.Clear();
+
             string query = "SELECT [a.fullName], [b.allScoresStud] FROM Students a, ScoresStud b WHERE b.idStud=a.idStud ORDER BY b.allScoresStud DESC";
             OleDbCommand command = new OleDbCommand(query, myConnection);
 
@@ -34,9 +36,9 @@ namespace BRS_Hostel
                 ratingTable.Rows.Add(s);
 
             int sz = ratingTable.ColumnHeadersHeight + ratingTable.RowTemplate.Height * ratingTable.Rows.Count - Convert.ToInt32(ratingTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= 260)
                 ratingTable.Height = sz;
-            else ratingTable.Height = 250;
+            else ratingTable.Height = 260;
         }
     }
 }

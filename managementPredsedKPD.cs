@@ -33,10 +33,12 @@ namespace BRS_Hostel
 
         private void loadDatePredsedKPD()
         {
-            panelPredsedKPD.Dock = DockStyle.Fill;
             panelPredsedKPD.Show();
+            panelPredsedKPD.Dock = DockStyle.Fill;
+            
 
             commonPredsedKPDPanel.Show();
+
             personalPredsedKPDPanel.Hide();
             panelListKPD.Hide();
 
@@ -66,7 +68,7 @@ namespace BRS_Hostel
             panelListKPD.Size = new Size(660, 320);
 
             //инициализация таблицы для просмотра списка КПД
-            PredsedKPDTable.Location = new Point(50, 55);
+            PredsedKPDTable.Location = new Point(50, 20);
             PredsedKPDTable.Size = new Size(560, commonPredsedKPDTable.ColumnHeadersHeight);
 
 
@@ -99,9 +101,9 @@ namespace BRS_Hostel
 
             int sz = PredsedKPDTable.ColumnHeadersHeight + PredsedKPDTable.RowTemplate.Height * PredsedKPDTable.Rows.Count
                 - Convert.ToInt32(PredsedKPDTable.Rows.Count * 2);
-            if (sz <= 290)
+            if (sz <= panelListKPD.Height - PredsedKPDTable.Location.Y - 15)
                 PredsedKPDTable.Height = sz;
-            else PredsedKPDTable.Height = 290;
+            else PredsedKPDTable.Height = panelListKPD.Height- PredsedKPDTable.Location.Y-15;
         }
 
 
@@ -129,9 +131,9 @@ namespace BRS_Hostel
 
             int sz = commonPredsedKPDTable.ColumnHeadersHeight + commonPredsedKPDTable.RowTemplate.Height * commonPredsedKPDTable.Rows.Count
                 - Convert.ToInt32(commonPredsedKPDTable.Rows.Count * 2);
-            if (sz <= 290)
+            if (sz <= commonPredsedKPDPanel.Height - commonPredsedKPDTable.Location.Y - 15)
                 commonPredsedKPDTable.Height = sz;
-            else commonPredsedKPDTable.Height = 290;
+            else commonPredsedKPDTable.Height = commonPredsedKPDPanel.Height- commonPredsedKPDTable.Location.Y-15;
 
         }
         
@@ -171,9 +173,9 @@ namespace BRS_Hostel
 
             int sz = personalPredsedKPDTable.ColumnHeadersHeight + personalPredsedKPDTable.RowTemplate.Height * personalPredsedKPDTable.Rows.Count
                 - Convert.ToInt32(personalPredsedKPDTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedKPDPanel.Height - personalPredsedKPDTable.Location.Y - 15)
                 personalPredsedKPDTable.Height = sz;
-            else personalPredsedKPDTable.Height = 190;
+            else personalPredsedKPDTable.Height = personalPredsedKPDPanel.Height - personalPredsedKPDTable.Location.Y - 15;
         }
         
         private void savePredsedKPD_Click(object sender, EventArgs e)
@@ -235,7 +237,7 @@ namespace BRS_Hostel
             {
                 command.ExecuteNonQuery();
                 personalDatePredsedKPD(idKPD);
-                eventChangeDateTable();
+                eventChangeDataTable();
             }
             catch
             {
@@ -268,7 +270,8 @@ namespace BRS_Hostel
         {
             panelPredsedKPD.Hide();
             eventLoadD -= loadDatePredsedKPD;
-            eventChangeDateTable -= commonDatePredsedKPD;
+            eventChangeDataTable -= commonDatePredsedKPD;
+            eventCloseD -= closeDatePredsedKPD;
         }
     }
 }

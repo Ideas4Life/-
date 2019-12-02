@@ -8,19 +8,21 @@ namespace BRS_Hostel
 {
     public partial class HomeForm : Form
     {
+        //public string adr = System.Windows.Forms.Application.StartupPath;
         public static string connectString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=DB_BRS_Hostel.mdb;";
         private OleDbConnection myConnection;
         private string StId="";
         private bool login = false;
         private string position = "";
 
-        delegate void LoadDate();
-        event LoadDate eventLoadD;
-        event LoadDate eventCloseD;
-        event LoadDate eventChangeDateTable;
-        bool bProf = false;
-        bool bProgress = false;
-        bool bManag = false;
+        delegate void LoadData();
+        event LoadData eventLoadD;
+        event LoadData eventCloseD;
+        event LoadData eventChangeDataTable;
+
+        bool bProf;
+        bool bProgress;
+        bool bManag;
 
         /*
             Конструктор формы
@@ -30,21 +32,15 @@ namespace BRS_Hostel
         {
             InitializeComponent();
 
-            login = false;
+            bProf = false;
+            bProgress = false;
+            bManag = false;
 
             // создаем экземпляр класса OleDbConnection
             myConnection = new OleDbConnection(connectString);
 
             // открываем соединение с БД
             myConnection.Open();
-
-           KPDTable.Location = сultSportVolontTable.Location = olympСonfTable.Location
-                = hozChasTable.Location = dopScoresTable.Location = stipendiaTable.Location =
-                StudKPDTable.Location = allProgressTable.Location = new Point(15, 85);
-
-            allProgressTable.Size = KPDTable.Size = сultSportVolontTable.Size = olympСonfTable.Size
-                = hozChasTable.Size = dopScoresTable.Size = stipendiaTable.Size =
-                StudKPDTable.Size = new Size(640, 80);
 
             authorizationPanel.Location = new Point(400,15);
             nameApplication.Location = new Point(280, 70);
@@ -68,6 +64,7 @@ namespace BRS_Hostel
             toolTip.SetToolTip(managementBox, "Управление");
 
             //Добавление обработчиков события загрузки данных студентов
+            eventLoadD += loadDataProgressUser;
             eventLoadD += loadDataKPD;
             eventLoadD += loadDataProfileStud;
             eventLoadD += loadDataOlympKonf;
@@ -80,16 +77,16 @@ namespace BRS_Hostel
             eventLoadD += loadDataAllProgress;
 
             //Добавление обработчиков события для обновления данных в таблицах
-            eventChangeDateTable += changeSumScoreStud;
-            eventChangeDateTable += loadDataProfileStud;
-            eventChangeDateTable += loadDataOlympKonf;
-            eventChangeDateTable += loadDataCultSportVolont;
-            eventChangeDateTable += loadDataHozChas;
-            eventChangeDateTable += loadDataDopScore;
-            eventChangeDateTable += loadDataStipendia;
-            eventChangeDateTable += loadDataStudKPD;
-            eventChangeDateTable += loadDataRating;
-            eventChangeDateTable += loadDataAllProgress;
+            eventChangeDataTable += changeSumScoreStud;
+            eventChangeDataTable += loadDataProfileStud;
+            eventChangeDataTable += loadDataOlympKonf;
+            eventChangeDataTable += loadDataCultSportVolont;
+            eventChangeDataTable += loadDataHozChas;
+            eventChangeDataTable += loadDataDopScore;
+            eventChangeDataTable += loadDataStipendia;
+            eventChangeDataTable += loadDataStudKPD;
+            eventChangeDataTable += loadDataRating;
+            eventChangeDataTable += loadDataAllProgress;
         }
         
         //Авторизация пользователей
@@ -97,48 +94,68 @@ namespace BRS_Hostel
         private void loginButton_Click(object sender, EventArgs e)
         {
             errorLabel.Visible = false;
+
             if (logField.Text.Length != 0 && passField.Text.Length != 0)
             {
+                bool yes = false;
                 //запрос на проверку логина и пароля и получения id студента
-                string query = "Select [idStud], [position] From [Students] Where [idStud]=" +
-                    "(SELECT [idStud] FROM [LoginUser] Where  [login]=@uLog AND [password]=@uPas)";
-                OleDbCommand command = new OleDbCommand(query, myConnection);
+                string query1 = "SELECT [idStud] FROM [LoginUser] Where  [login]=@uLog AND [password]=@uPas";
+                OleDbCommand command = new OleDbCommand(query1, myConnection);
                 command.Parameters.Add("uLog", OleDbType.VarChar).Value = logField.Text;
                 command.Parameters.Add("uPas", OleDbType.VarChar).Value = passField.Text;
-                
+
+                try
+                {
+                    StId = command.ExecuteScalar().ToString();
+                    logField.Text = "";
+                    passField.Text = "";
+                    login = true;
+                    
+                    authorizationPanel.Visible = false;
+                    nameApplication.Visible = true;
+                    if (!authorizationPanel.Visible)
+                        exitBotton.Visible = true;
+                }
+                catch
+                {
+                    errorLabel.Visible = true;
+                }
+
+
+                string query = "Select [position] From [Students] Where [idStud]=@id";
+                command = new OleDbCommand(query, myConnection);
+                command.Parameters.Add("id", OleDbType.VarChar).Value = StId;
+
                 try
                 {
                     OleDbDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
-                        StId = reader[0].ToString();
-                        position = reader[1].ToString();
+                        position = reader[0].ToString();
+                        yes = true;
                     }
                     bProf = true;
-                    login = true;
-                    authorizationPanel.Visible = false;
-                    nameApplication.Visible = true;
                 }
                 catch
                 {
-                        errorLabel.Visible = true;
+                    errorLabel.Visible = true;
                 }
-                logField.Text = "";
-                passField.Text = "";
+
 
                 switch (position)
                 {
                     case "Пользователь":
                         {
                             bProgress = true;
+                            eventCloseD += closeDateUser;
                             break;
                         }
                     case "Комендант":
                         {
                             eventLoadD += loadDataComendant;
                             eventCloseD += closeDateComendant;
-                            eventChangeDateTable += loadlistStudsComend;
-                            eventChangeDateTable += dataLoadStudSovetCom;
+                            eventChangeDataTable += loadlistStudsComend;
+                            eventChangeDataTable += dataLoadStudSovetCom;
                             bManag = true;
                             break;
                         }
@@ -146,16 +163,16 @@ namespace BRS_Hostel
                         {
                             eventLoadD += loadDateSanKom;
                             eventCloseD += closeDateSanKom;
-                            eventChangeDateTable += commonDateSanKom;
-                            bProgress= true;
+                            eventChangeDataTable += commonDateSanKom;
+                            bProgress = true;
                             bManag = true;
                             break;
                         }
                     case "Отв. хоз часы":
                         {
-                            eventLoadD +=loadDateHozChas;
+                            eventLoadD += loadDateHozChas;
                             eventCloseD += closeDateHozChas;
-                            eventChangeDateTable += commonDateHozChas;
+                            eventChangeDataTable += commonDateHozChas;
                             bProgress = true;
                             bManag = true;
                             break;
@@ -164,32 +181,28 @@ namespace BRS_Hostel
                         {
                             eventLoadD += loadDateCultOrg;
                             eventCloseD += closeDateCultOrg;
-                            eventChangeDateTable += commonDateCultOrg;
+                            eventChangeDataTable += commonDateCultOrg;
                             bProgress = true;
                             bManag = true;
                             break;
                         }
                     case "Отв. науч деят":
                         {
-                            eventLoadD +=loadDateScienceOrg;
+                            eventLoadD += loadDateScienceOrg;
                             eventCloseD += closeDateScienceOrg;
-                            eventChangeDateTable += commonDateScienceOrg;
+                            eventChangeDataTable += commonDateScienceOrg;
                             bProgress = true;
                             bManag = true;
-                            break;
-                        }
-                    case "Староста этажа":
-                        {
-                            bProgress = true;
                             break;
                         }
                     case "Председ. КПД":
                         {
-                            bProgress = true;
-                            bManag = true;
+                            
                             eventLoadD += loadDatePredsedKPD;
                             eventCloseD += closeDatePredsedKPD;
-                            eventChangeDateTable += commonDatePredsedKPD;
+                            eventChangeDataTable += commonDatePredsedKPD;
+                            bProgress = true;
+                            bManag = true;
                             break;
                         }
                     case "Председатель СС":
@@ -198,28 +211,20 @@ namespace BRS_Hostel
                             bManag = true;
                             eventLoadD += loadDatePredsedSS;
                             eventCloseD += closeDatePredsedSS;
-                            eventChangeDateTable += commonDataPredsedSS;
+                            eventChangeDataTable += commonDataPredsedSS;
                             break;
                         }
-                    default: break;    
+                    default: break;
                 }
-                eventLoadD?.Invoke();
+                if (yes)
+                    eventLoadD?.Invoke();
+
             }
             else
             {
                 errorLabel.Visible = true;
             }
-            if (!authorizationPanel.Visible)
-                exitBotton.Visible = true;
-
-            allProgressTable.Visible = true;
-            hozChasTable.Visible = false;
-            сultSportVolontTable.Visible = false;
-            olympСonfTable.Visible = false;
-            dopScoresTable.Visible = false;
-            stipendiaTable.Visible = false;
-            StudKPDTable.Visible = false;
-            KPDTable.Visible = false;
+            
         }
 
         //Выход пользователя из учётной записи
@@ -227,13 +232,16 @@ namespace BRS_Hostel
         private void exitBotton_Click(object sender, EventArgs e)
         {
             login = false;
-            position = "";
-            authorizationPanel.Visible = true;
-            exitBotton.Visible = false;
-            nameApplication.Visible = false;
             bProf = false;
             bProgress = false;
             bManag = false;
+
+            position = "";
+            authorizationPanel.Visible = true;
+            exitBotton.Visible = false;
+
+            nameApplication.Visible = false;
+            
             eventCloseD?.Invoke();
         }
 

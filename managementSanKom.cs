@@ -77,9 +77,9 @@ namespace BRS_Hostel
 
             int sz = lookScoresSanKom.ColumnHeadersHeight + lookScoresSanKom.RowTemplate.Height * lookScoresSanKom.Rows.Count
                 - Convert.ToInt32(lookScoresSanKom.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= panelSanKom.Height - lookScoresSanKom.Location.Y - 15)
                 lookScoresSanKom.Height = sz;
-            else lookScoresSanKom.Height = 250;
+            else lookScoresSanKom.Height = panelSanKom.Height- lookScoresSanKom.Location.Y-15;
 
         }
 
@@ -108,9 +108,9 @@ namespace BRS_Hostel
 
             int sz = addScoresSanKom.ColumnHeadersHeight + addScoresSanKom.RowTemplate.Height * addScoresSanKom.Rows.Count
                 - Convert.ToInt32(addScoresSanKom.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= panelSanKom.Height - addScoresSanKom.Location.Y - 15)
                 addScoresSanKom.Height = sz;
-            else addScoresSanKom.Height = 250;
+            else addScoresSanKom.Height = panelSanKom.Height - addScoresSanKom.Location.Y - 15;
 
         }
 
@@ -159,13 +159,15 @@ namespace BRS_Hostel
             addScoresSanKom.Rows.Clear();
 
             changeDateSanKom();
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
 
         private void closeDateSanKom()
         {
             panelSanKom.Hide();
-            eventChangeDateTable -= commonDateSanKom;
+            eventLoadD -= loadDateSanKom;
+            eventCloseD -= closeDateSanKom;
+            eventChangeDataTable -= commonDateSanKom;
         }
     }
 }

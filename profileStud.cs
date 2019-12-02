@@ -21,6 +21,7 @@ namespace BRS_Hostel
             numberTicketStud.AutoSize = true;
             numberRoom.AutoSize = true;
             positionStud.AutoSize = true;
+            dateBornLabel.AutoSize = true;
 
             string query = "SELECT * FROM [Students] WHERE  idStud=@uId";
             OleDbCommand command = new OleDbCommand(query, myConnection);
@@ -69,6 +70,20 @@ namespace BRS_Hostel
         private void changePhoto_MouseUp(object sender, MouseEventArgs e)
         {
             changePhoto.ForeColor = Color.Black;
+        }
+
+        private void closeDateUser()
+        {
+            fullNameStud.Text = "";
+            faculty.Text = "";
+            groupStud.Text = "";
+            courseStud.Text = "";
+            numberTicketStud.Text = "";
+            numberRoom.Text = "";
+            positionStud.Text = "";
+            dateBornLabel.Text = "";
+
+            eventCloseD -= closeDateUser;
         }
     }
 }

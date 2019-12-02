@@ -113,9 +113,9 @@ namespace BRS_Hostel
 
             int sz = commonPredsedSSTable.ColumnHeadersHeight + commonPredsedSSTable.RowTemplate.Height 
                 * commonPredsedSSTable.Rows.Count - Convert.ToInt32(commonPredsedSSTable.Rows.Count * 2);
-            if (sz <= 290)
+            if (sz <= commonPredsedSSPanel.Height - commonPredsedSSTable.Location.Y - 15)
                 commonPredsedSSTable.Height = sz;
-            else commonPredsedSSTable.Height = 290;;
+            else commonPredsedSSTable.Height = commonPredsedSSPanel.Height- commonPredsedSSTable.Location.Y-15;
         }
 
         private void loadDateStudSovet()
@@ -142,9 +142,9 @@ namespace BRS_Hostel
 
             int sz = studSovetPredsedSSTable.ColumnHeadersHeight + studSovetPredsedSSTable.RowTemplate.Height *
                 studSovetPredsedSSTable.Rows.Count - Convert.ToInt32(studSovetPredsedSSTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= studSovetPredsedSSPanel.Height - studSovetPredsedSSTable.Location.Y - 15)
                 studSovetPredsedSSTable.Height = sz;
-            else studSovetPredsedSSTable.Height = 250;
+            else studSovetPredsedSSTable.Height = studSovetPredsedSSPanel.Height- studSovetPredsedSSTable.Location.Y-15;
         }
 
         private void findSSPredsedSS_Click(object sender, EventArgs e)
@@ -174,9 +174,9 @@ namespace BRS_Hostel
 
                 int sz = studSovetPredsedSSTable.ColumnHeadersHeight + studSovetPredsedSSTable.RowTemplate.Height *
                     studSovetPredsedSSTable.Rows.Count - Convert.ToInt32(studSovetPredsedSSTable.Rows.Count * 2);
-                if (sz <= 250)
+                if (sz <= studSovetPredsedSSPanel.Height - studSovetPredsedSSTable.Location.Y - 15)
                     studSovetPredsedSSTable.Height = sz;
-                else studSovetPredsedSSTable.Height = 250;
+                else studSovetPredsedSSTable.Height = studSovetPredsedSSPanel.Height - studSovetPredsedSSTable.Location.Y - 15;
             }
             else
             {
@@ -210,7 +210,7 @@ namespace BRS_Hostel
                 }
             }
             loadDateStudSovet();
-            eventChangeDateTable?.Invoke();
+            eventChangeDataTable?.Invoke();
             if (idSS>0)
             {
                 loadDataOlympKonfPredsedSS();
@@ -283,9 +283,9 @@ namespace BRS_Hostel
 
             int sz = olympConfPredsedSSTable.ColumnHeadersHeight + olympConfPredsedSSTable.RowTemplate.Height *
                 olympConfPredsedSSTable.Rows.Count - Convert.ToInt32(olympConfPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - olympConfPredsedSSTable.Location.Y - 15)
                 olympConfPredsedSSTable.Height = sz;
-            else olympConfPredsedSSTable.Height = 190;
+            else olympConfPredsedSSTable.Height = personalPredsedSSPanel.Height- olympConfPredsedSSTable.Location.Y-15;
         }
 
         //Загрузка данных пользователя для предсета СС о его культурных, спортивных, волонтерских мероприятиях из базы данных
@@ -317,9 +317,9 @@ namespace BRS_Hostel
 
             int sz = cultSportVolontPredsedSSTable.ColumnHeadersHeight + cultSportVolontPredsedSSTable.RowTemplate.Height *
                 cultSportVolontPredsedSSTable.Rows.Count - Convert.ToInt32(cultSportVolontPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - cultSportVolontPredsedSSTable.Location.Y - 15)
                 cultSportVolontPredsedSSTable.Height = sz;
-            else cultSportVolontPredsedSSTable.Height = 190;
+            else cultSportVolontPredsedSSTable.Height = personalPredsedSSPanel.Height - cultSportVolontPredsedSSTable.Location.Y - 15;
         }
 
         //Загрузка данных пользователя для предсета СС о его Хоз часах из базы данных
@@ -352,9 +352,9 @@ namespace BRS_Hostel
 
             int sz = hozChasPredsedSSTable.ColumnHeadersHeight + hozChasPredsedSSTable.RowTemplate.Height * hozChasPredsedSSTable.Rows.Count
                 - Convert.ToInt32(hozChasPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - hozChasPredsedSSTable.Location.Y - 15)
                 hozChasPredsedSSTable.Height = sz;
-            else hozChasPredsedSSTable.Height = 190;
+            else hozChasPredsedSSTable.Height = personalPredsedSSPanel.Height- hozChasPredsedSSTable.Location.Y -15;
         }
 
         //Загрузка данных пользователя для предсета СС о его дополнительных баллах из базы данных
@@ -389,9 +389,9 @@ namespace BRS_Hostel
 
             int sz = dopScorePredsedSSTable.ColumnHeadersHeight + dopScorePredsedSSTable.RowTemplate.Height *
                 dopScorePredsedSSTable.Rows.Count - Convert.ToInt32(dopScorePredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - dopScorePredsedSSTable.Location.Y - 15)
                 dopScorePredsedSSTable.Height = sz;
-            else dopScorePredsedSSTable.Height = 190;
+            else dopScorePredsedSSTable.Height = personalPredsedSSPanel.Height- dopScorePredsedSSTable.Location.Y-15;
         }
 
         //Загрузка данных пользователя для предсета СС о его именных стипендиях из базы данных
@@ -422,9 +422,9 @@ namespace BRS_Hostel
 
             int sz = stipendiaPredsedSSTable.ColumnHeadersHeight + stipendiaPredsedSSTable.RowTemplate.Height *
                 stipendiaPredsedSSTable.Rows.Count - Convert.ToInt32(stipendiaPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - stipendiaPredsedSSTable.Location.Y - 15)
                 stipendiaPredsedSSTable.Height = sz;
-            else stipendiaPredsedSSTable.Height = 190;
+            else stipendiaPredsedSSTable.Height = personalPredsedSSPanel.Height- stipendiaPredsedSSTable.Location.Y -15;
         }
 
         //Загрузка данных пользователя для предсета СС о его нарушениях КПД из базы данных
@@ -462,9 +462,9 @@ namespace BRS_Hostel
 
             int sz = studKPDPredsedSSTable.ColumnHeadersHeight + studKPDPredsedSSTable.RowTemplate.Height * studKPDPredsedSSTable.Rows.Count -
                 Convert.ToInt32(studKPDPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - studKPDPredsedSSTable.Location.Y - 15)
                 studKPDPredsedSSTable.Height = sz;
-            else studKPDPredsedSSTable.Height = 190;
+            else studKPDPredsedSSTable.Height = personalPredsedSSPanel.Height- studKPDPredsedSSTable.Location.Y -15 ;
         }
 
         //Загрузка данных пользователя для предсета СС о его свобдных баллах из базы данных
@@ -504,9 +504,9 @@ namespace BRS_Hostel
             int sz = allProgressPredsedSSTable.ColumnHeadersHeight +
                 allProgressPredsedSSTable.RowTemplate.Height * allProgressPredsedSSTable.Rows.Count -
                 Convert.ToInt32(allProgressPredsedSSTable.Rows.Count * 2);
-            if (sz <= 190)
+            if (sz <= personalPredsedSSPanel.Height - allProgressPredsedSSTable.Location.Y - 15)
                 allProgressPredsedSSTable.Height = sz;
-            else allProgressPredsedSSTable.Height = 190;
+            else allProgressPredsedSSTable.Height = personalPredsedSSPanel.Height- allProgressPredsedSSTable.Location.Y -15;
         }
         private void mainScoresPredsedSSLabel_Click(object sender, EventArgs e)
         {
@@ -588,7 +588,7 @@ namespace BRS_Hostel
         {
             panelPredsedSS.Hide();
             eventLoadD -= loadDatePredsedSS;
-            eventChangeDateTable -= commonDataPredsedSS;
+            eventChangeDataTable -= commonDataPredsedSS;
             eventCloseD -= closeDatePredsedSS;
         } 
     }

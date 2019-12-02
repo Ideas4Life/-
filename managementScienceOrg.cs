@@ -124,9 +124,9 @@ namespace BRS_Hostel
 
             int sz = commonScienceOrgTable.ColumnHeadersHeight + commonScienceOrgTable.RowTemplate.Height * commonScienceOrgTable.Rows.Count
                 - Convert.ToInt32(commonScienceOrgTable.Rows.Count * 2);
-            if (sz <= 290)
+            if (sz <= commonScienceOrgPanel.Height - commonScienceOrgTable.Location.Y - 15)
                 commonScienceOrgTable.Height = sz;
-            else commonScienceOrgTable.Height = 290;
+            else commonScienceOrgTable.Height = commonScienceOrgPanel.Height- commonScienceOrgTable.Location.Y -15;
 
         }
         private void findScienceOrgButton_Click(object sender, EventArgs e)
@@ -186,9 +186,9 @@ namespace BRS_Hostel
 
             int sz = personalScienceOrgTable.ColumnHeadersHeight + personalScienceOrgTable.RowTemplate.Height * personalScienceOrgTable.Rows.Count
                 - Convert.ToInt32(personalScienceOrgTable.Rows.Count * 2);
-            if (sz <= 250)
+            if (sz <= personalScienceOrgPanel.Height - personalScienceOrgTable.Location.Y - 15)
                 personalScienceOrgTable.Height = sz;
-            else personalScienceOrgTable.Height = 250;
+            else personalScienceOrgTable.Height = personalScienceOrgPanel.Height - personalScienceOrgTable.Location.Y - 15;
         }
         
         private void saveScienceOrgButton_Click(object sender, EventArgs e)
@@ -216,6 +216,7 @@ namespace BRS_Hostel
             personalScienceOrgTable.Rows.Clear();
 
             personalDateScienceOrg(idSO);
+            eventChangeDataTable?.Invoke();
         }
 
         private void stipendDateScienceOrg()
@@ -254,9 +255,9 @@ namespace BRS_Hostel
 
             int sz = stipendScienceOrgTable.ColumnHeadersHeight + stipendScienceOrgTable.RowTemplate.Height * stipendScienceOrgTable.Rows.Count
                 - Convert.ToInt32(stipendScienceOrgTable.Rows.Count * 2);
-            if (sz <= 270)
+            if (sz <= stipendScienceOrgPanel.Height - stipendScienceOrgTable.Location.Y - 15)
                 stipendScienceOrgTable.Height = sz;
-            else stipendScienceOrgTable.Height = 270;
+            else stipendScienceOrgTable.Height = stipendScienceOrgPanel.Height- stipendScienceOrgTable.Location.Y -15;
         }
 
         private void addStipendScienceOrg_Click(object sender, EventArgs e)
@@ -288,6 +289,7 @@ namespace BRS_Hostel
             command1.ExecuteNonQuery();
 
             stipendDateScienceOrg();
+            eventChangeDataTable?.Invoke();
         }
         
         private void studyDateScienceOrg()
@@ -313,9 +315,9 @@ namespace BRS_Hostel
 
             int sz = studyScienceOrgTable.ColumnHeadersHeight + studyScienceOrgTable.RowTemplate.Height * studyScienceOrgTable.Rows.Count
                 - Convert.ToInt32(studyScienceOrgTable.Rows.Count * 2);
-            if (sz <= 270)
+            if (sz <= studyScienceOrgPanel.Height - studyScienceOrgTable.Location.Y - 15)
                 studyScienceOrgTable.Height = sz;
-            else studyScienceOrgTable.Height = 270;
+            else studyScienceOrgTable.Height = studyScienceOrgPanel.Height- studyScienceOrgTable.Location.Y -15;
         }
         
         private void addStudyScienceOrgButton_Click(object sender, EventArgs e)
@@ -339,14 +341,17 @@ namespace BRS_Hostel
 
                 command1.ExecuteNonQuery();
             }
+
             studyDateScienceOrg();
-            eventChangeDateTable();
+            eventChangeDataTable();
         }
         
         private void closeDateScienceOrg()
         {
             panelScienceOrg.Hide();
-            eventChangeDateTable -= commonDateScienceOrg;
+            eventLoadD -= loadDateScienceOrg;
+            eventCloseD -= closeDateScienceOrg;
+            eventChangeDataTable -= commonDateScienceOrg;
         }
         
     }
